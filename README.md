@@ -7,7 +7,7 @@ This plugin works for all Flutter supported platforms i.e. Android, iOS, Web and
 
 ## Usage
 ### Add dependency
-> localregex: ^1.0.0
+> localregex: ^1.0.2
 
 ### Import package
 ```dart
@@ -32,5 +32,34 @@ localregex.isTelecel('mobile_number');
 localregex.isZwMobile('mobile_number');
 ```
 
-#### [Check the package out on pub.dev](https://pub.dev/packages/localregex)
-#### [Or on my website](https://iamngoni.co.zw/localregex)
+### Check if a supplied email matches proper email patterns
+
+```dart
+localregex.isEmail('email_address');
+```
+
+### Check if a supplied national id matches the pattern for Zimbabwean national id
+
+```dart
+localregex.isZimbabwean('national_id');
+```
+
+### Check passport number
+
+```dart
+localregex.isZwPassword('passport_number');
+```
+
+### Check number plate
+
+```dart
+localregex.isZwNumberPlate('number_plate');
+```
+
+### Check driver's license
+
+```dart
+localregex.isZwDriversLicence('drivers_license');
+```
+
+> Inbilt Teknolog ©
