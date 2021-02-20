@@ -14,14 +14,14 @@ void main() {
   group("Test +263 mobile numbers", () {
     test(":Validate netone number", () {
       try {
-        assert(localregex.isNetone("+263713700601"), true);
+        assert(localregex.isNetone("263713700601"), true);
       } on AssertionError catch (e) {
         print(e);
       }
     });
     test(":Validate telecel number", () {
       try {
-        assert(localregex.isTelecel("+263733220033"), true);
+        assert(localregex.isTelecel("2630733220033"), true);
       } on AssertionError catch (e) {
         print(e);
       }
@@ -29,7 +29,7 @@ void main() {
 
     test(":Validate econet number 26377", () {
       try {
-        assert(localregex.isEconet("+263777213388"), true);
+        assert(localregex.isEconet("263777213388"), true);
       } on AssertionError catch (e) {
         print(e);
       }

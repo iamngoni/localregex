@@ -4,11 +4,11 @@ class LocalRegex {
   /// LocalRegex
   ///
   /// [LocalRegex] is a regex package developed by Ngonidzashe Mangudya
-  final RegExp _emailAdress = new RegExp(
+  final RegExp _emailAddress = new RegExp(
       r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
-  final RegExp _econet = RegExp(r'(^.263|0)(77|78)[0-9]{7}$');
-  final RegExp _netone = RegExp(r'(^.263|0)(71)[0-9]{7}$');
-  final RegExp _telecel = RegExp(r'(^.263|0)(73)[0-9]{7}$');
+  final RegExp _econet = RegExp(r'(?:\+?263|0)(77|78)[0-9]{7}$');
+  final RegExp _netone = RegExp(r'(?:\+?263|0)(71)[0-9]{7}$');
+  final RegExp _telecel = RegExp(r'(?:\+?263|0)(73)[0-9]{7}$');
   final RegExp _nationalId =
       RegExp(r'^([0-9]{2})(-|\s)([0-9]{6})(\s)([A-Z]{1})(\s)([0-9]{2})$');
   final RegExp _numberPlate = RegExp(r'^[A-Z]{3}(-|\s)[0-9]{4}$');
@@ -16,7 +16,7 @@ class LocalRegex {
   final RegExp _driversLicence = RegExp(r'\d{5}[a-zA-Z]{2}');
 
   /// Checks if an email address is valid
-  bool isEmail(String value) => _emailAdress.hasMatch(value);
+  bool isEmail(String value) => _emailAddress.hasMatch(value);
 
   /// Checks if a string is a valid Netone mobile number
   bool isNetone(String value) => _netone.hasMatch(value);
