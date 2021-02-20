@@ -10,3 +10,6 @@ First release of localregex
 
 # 1.0.1
 * Improved email validation
+
+# 1.0.2
+* Fixed + sign bug on mobile numbers

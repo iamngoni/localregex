@@ -5,7 +5,7 @@ class LocalRegex {
   ///
   /// [LocalRegex] is a regex package developed by Ngonidzashe Mangudya
   final RegExp _emailAddress = new RegExp(
-      r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
+      r"^[a-zA-Z0-9.a-zA-Z0-9!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
   final RegExp _econet = RegExp(r'(?:\+?263|0)(77|78)[0-9]{7}$');
   final RegExp _netone = RegExp(r'(?:\+?263|0)(71)[0-9]{7}$');
   final RegExp _telecel = RegExp(r'(?:\+?263|0)(73)[0-9]{7}$');
