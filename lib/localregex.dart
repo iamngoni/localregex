@@ -15,31 +15,47 @@ class LocalRegex {
   final RegExp _passportNumber = RegExp(r'^[A-Z]{2}[0-9]{6}$');
   final RegExp _driversLicence = RegExp(r'\d{5}[a-zA-Z]{2}');
 
+  /// Match full string
+  bool _isValid(String value, RegExp source) {
+    try {
+      final matches = source.allMatches(value);
+      for (Match match in matches) {
+        if (match.start == 0 && match.end == value.length) {
+          return true;
+        }
+      }
+      return false;
+    } catch (e) {
+      assert(false);
+      return true;
+    }
+  }
+
   /// Checks if an email address is valid
-  bool isEmail(String value) => _emailAddress.hasMatch(value);
+  bool isEmail(String value) => _isValid(value, _emailAddress);
 
   /// Checks if a string is a valid Netone mobile number
-  bool isNetone(String value) => _netone.hasMatch(value);
+  bool isNetone(String value) => _isValid(value, _netone);
 
   /// Checks if a string is a valid Telecel mobile number
-  bool isTelecel(String value) => _telecel.hasMatch(value);
+  bool isTelecel(String value) => _isValid(value, _telecel);
 
   /// Checks if a string is a valid Econet mobile number
-  bool isEconet(String value) => _econet.hasMatch(value);
+  bool isEconet(String value) => _isValid(value, _econet);
 
   /// Checks if a string is a valid Zimbabwean mobile number registered under the top 3 mobile network providers
   bool isZwMobile(String value) =>
       this.isEconet(value) || this.isNetone(value) || this.isTelecel(value);
 
   /// Checks if a string is a valid National ID number for Zimbabwe
-  bool isZw(String value) => _nationalId.hasMatch(value);
+  bool isZimbabwean(String value) => _isValid(value, _nationalId);
 
   /// Checks if a string is a valid Passport number for Zimbabwe
-  bool isZwPassport(String value) => _passportNumber.hasMatch(value);
+  bool isZwPassport(String value) => _isValid(value, _passportNumber);
 
   /// Checks if a string is a valid Vehicle Number plate for Zimbabwe
-  bool isZwNumberPlate(String value) => _numberPlate.hasMatch(value);
+  bool isZwNumberPlate(String value) => _isValid(value, _numberPlate);
 
   /// Checks if a string is a valid Driver's Licence for Zimbabwe
-  bool isZwDriversLicence(String value) => _driversLicence.hasMatch(value);
+  bool isZwDriversLicence(String value) => _isValid(value, _driversLicence);
 }
