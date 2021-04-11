@@ -1,5 +1,8 @@
 library localregex;
 
+import 'package:flutter/foundation.dart';
+import 'package:localregex/format-types.dart';
+
 class LocalRegex {
   /// LocalRegex
   ///
@@ -58,4 +61,52 @@ class LocalRegex {
 
   /// Checks if a string is a valid Driver's Licence for Zimbabwe
   bool isZwDriversLicence(String value) => _isValid(value, _driversLicence);
+
+  /// Checks if mobile number is a valid Zimbabwean mobile number (Econet, Netone & Telecel) and returns a formatted version
+  String? formatIfIsZimbabwe(
+      {required String value, required FormatTypes type}) {
+    String? _number;
+    if (this.isZwMobile(value)) {
+      if (type == FormatTypes.common) {
+        _number = _formatCommon(value);
+      } else if (type == FormatTypes.commonPlus) {
+        _number = _formatCommonPlus(value);
+      } else if (type == FormatTypes.regular) {
+        _number = _formatRegular(value);
+      }
+    } else {
+      throw Exception("Mobile number is not valid");
+    }
+
+    return _number;
+  }
+
+  /// Format to 263
+  String _formatCommon(String number) {
+    if (number.length < 9) {
+      throw Exception("Mobile number length cannot be less than 9");
+    }
+    String nineLong = number.substring(number.length - 9);
+    return "263${nineLong.replaceAll(new RegExp(r"\s+"), "")}";
+  }
+
+  /// Format to +263
+  String _formatCommonPlus(String number) {
+    if (number.length < 9) {
+      throw Exception("Mobile number length cannot be less than 9");
+    }
+
+    String nineLong = number.substring(number.length - 9);
+    return "+263${nineLong.replaceAll(new RegExp(r"\s+"), "")}";
+  }
+
+  /// Format to 07
+  String _formatRegular(String number) {
+    if (number.length < 9) {
+      throw Exception("Mobile number length cannot be less than 9");
+    }
+
+    String nineLong = number.substring(number.length - 9);
+    return "0${nineLong.replaceAll(new RegExp(r"\s+"), "")}";
+  }
 }

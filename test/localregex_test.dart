@@ -1,4 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:localregex/format-types.dart';
 import 'package:localregex/localregex.dart';
 
 void main() {
@@ -160,6 +161,32 @@ void main() {
       isValid = localregex.isZwMobile("263713700601");
       expect(isValid, true);
       isValid = localregex.isZwMobile("263733220033");
+    });
+  });
+
+  group("Testing formatting", () {
+    test(":is Common (2637) format correct", () {
+      String? number = localregex.formatIfIsZimbabwe(
+        value: '0777213388',
+        type: FormatTypes.common,
+      );
+      expect(number, '263777213388');
+    });
+
+    test(":is Common Plus (+2637) format correct", () {
+      String? number = localregex.formatIfIsZimbabwe(
+        value: '263777213388',
+        type: FormatTypes.commonPlus,
+      );
+      expect(number, '+263777213388');
+    });
+
+    test(":is Regular (07) format correct", () {
+      String? number = localregex.formatIfIsZimbabwe(
+        value: '+263777213388',
+        type: FormatTypes.regular,
+      );
+      expect(number, '0777213388');
     });
   });
 }

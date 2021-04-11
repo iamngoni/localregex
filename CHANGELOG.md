@@ -14,3 +14,7 @@ First release of localregex
 # 1.0.2
 * Fixed + sign bug on mobile numbers
 * Removed duplicate characters on email validation
+
+# 2.0.0
+* Mobile number formatting
+* Null safety migration

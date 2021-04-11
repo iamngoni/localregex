@@ -1,13 +1,13 @@
 # localregex
 
 This plugin allows flutter developers to check if an input matches common regex patterns in Zimbabwe
-This plugin works for all Flutter supported platforms i.e. Android, iOS, Web and Desktop (tested on Linux and Windows).
+This plugin works for all Flutter supported platforms i.e. Android, iOS, Web and Desktop (Linux, Windows & MacOS).
 
 > Developed by Ngonidzashe Mangudya
 
 ## Usage
 ### Add dependency
-> localregex: ^1.0.2
+> localregex: ^2.0.0
 
 ### Import package
 ```dart
@@ -62,4 +62,32 @@ localregex.isZwNumberPlate('number_plate');
 localregex.isZwDriversLicence('drivers_license');
 ```
 
-> Inbilt Teknolog ©
+### Check mobile number and return mobile number in required format
+
+``` dart
+String? number = localregex.formatIfIsZimbabwe(
+  value: '+263777213388',
+  type: FormatTypes.regular,
+);
+```
+
+## Format Types
+### Regular
+> This is the general format of mobile numbers e.g. 0777213388
+``` dart
+FormatTypes.regular
+```
+
+### Common
+> This is the mobile number format with country code but no + sign e.g. 263777213388
+``` dart
+FormatTypes.common
+```
+
+### Common Plus
+> This is the mobile number format with country code and + sign e.g. +263777213388
+``` dart
+FormatTypes.commonPlus
+```
+
+## Inbilt Teknolog ©
