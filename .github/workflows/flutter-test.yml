@@ -18,7 +18,7 @@ jobs:
       with:
         java-version: '12.x'
     # Setup the flutter environment.
-    - uses: subosito/flutter-action@v1.3.2
+    - uses: subosito/flutter-action@v1
       with:
         flutter-version: '1.22.4'
     
