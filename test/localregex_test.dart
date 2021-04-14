@@ -122,7 +122,7 @@ void main() {
   group("Test national id", () {
     test(":Validate national id without a space", () {
       // Act
-      bool isValid = localregex.isZimbabwean("75-511218 K 44");
+      bool isValid = localregex.isZimbabwean("75-511218 K44");
       // Assert
       expect(isValid, true);
     });
@@ -130,6 +130,12 @@ void main() {
       // Act
       bool isValid = localregex.isZimbabwean("75 511218 K 44");
       // Assert
+      expect(isValid, true);
+    });
+    test(":Validate national id with 7 numbers", () {
+      // Act
+      bool isValid = localregex.isZimbabwean("75 5112188 K44");
+      //Assert
       expect(isValid, true);
     });
   });

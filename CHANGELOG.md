@@ -18,3 +18,6 @@ First release of localregex
 # 2.0.0
 * Mobile number formatting
 * Null safety migration
+
+# 2.0.1
+* Allow 6 or 7 national id numbers (old and new id numbers)

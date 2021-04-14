@@ -7,7 +7,7 @@ This plugin works for all Flutter supported platforms i.e. Android, iOS, Web and
 
 ## Usage
 ### Add dependency
-> localregex: ^2.0.0
+> localregex: ^2.0.1
 
 ### Import package
 ```dart

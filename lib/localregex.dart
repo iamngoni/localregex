@@ -13,7 +13,7 @@ class LocalRegex {
   final RegExp _netone = RegExp(r'(?:\+?263|0)(71)[0-9]{7}$');
   final RegExp _telecel = RegExp(r'(?:\+?263|0)(73)[0-9]{7}$');
   final RegExp _nationalId =
-      RegExp(r'^([0-9]{2})(-|\s)([0-9]{6})(\s)([A-Z]{1})(\s)([0-9]{2})$');
+      RegExp(r'^([0-9]{2})(-|\s)([0-9]{6,7})(\s)([A-Z]{1})(\s)*([0-9]{2})$');
   final RegExp _numberPlate = RegExp(r'^[A-Z]{3}(-|\s)[0-9]{4}$');
   final RegExp _passportNumber = RegExp(r'^[A-Z]{2}[0-9]{6}$');
   final RegExp _driversLicence = RegExp(r'\d{5}[a-zA-Z]{2}');

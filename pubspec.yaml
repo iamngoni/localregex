@@ -1,6 +1,6 @@
 name: localregex
 description: Regular expressions package for popular patterns in Zimbabwe i.e. Passport Number, Mobile Numbers, Number Plates, etc
-version: 2.0.0
+version: 2.0.1
 homepage: https://www.iamngoni.co.zw/
 
 environment:
