@@ -1,6 +1,4 @@
 library localregex;
-
-import 'package:flutter/foundation.dart';
 import 'package:localregex/format-types.dart';
 
 class LocalRegex {
@@ -63,9 +61,9 @@ class LocalRegex {
   bool isZwDriversLicence(String value) => _isValid(value, _driversLicence);
 
   /// Checks if mobile number is a valid Zimbabwean mobile number (Econet, Netone & Telecel) and returns a formatted version
-  String? formatIfIsZimbabwe(
-      {required String value, required FormatTypes type}) {
-    String? _number;
+  String formatIfIsZimbabwe(
+      {String value, FormatTypes type}) {
+    String _number;
     if (this.isZwMobile(value)) {
       if (type == FormatTypes.common) {
         _number = _formatCommon(value);

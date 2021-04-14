@@ -65,7 +65,7 @@
       "name": "localregex",
       "rootUri": "../../",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.10"
     },
     {
       "name": "matcher",
@@ -146,7 +146,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-04-14T12:22:19.519036Z",
+  "generated": "2021-04-14T12:39:39.275537Z",
   "generator": "pub",
   "generatorVersion": "2.12.2"
 }

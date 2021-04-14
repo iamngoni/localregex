@@ -172,7 +172,7 @@ void main() {
 
   group("Testing formatting", () {
     test(":is Common (2637) format correct", () {
-      String? number = localregex.formatIfIsZimbabwe(
+      String number = localregex.formatIfIsZimbabwe(
         value: '0777213388',
         type: FormatTypes.common,
       );
@@ -180,7 +180,7 @@ void main() {
     });
 
     test(":is Common Plus (+2637) format correct", () {
-      String? number = localregex.formatIfIsZimbabwe(
+      String number = localregex.formatIfIsZimbabwe(
         value: '263777213388',
         type: FormatTypes.commonPlus,
       );
@@ -188,7 +188,7 @@ void main() {
     });
 
     test(":is Regular (07) format correct", () {
-      String? number = localregex.formatIfIsZimbabwe(
+      String number = localregex.formatIfIsZimbabwe(
         value: '+263777213388',
         type: FormatTypes.regular,
       );
