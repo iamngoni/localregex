@@ -167,6 +167,7 @@ void main() {
       isValid = localregex.isZwMobile("263713700601");
       expect(isValid, true);
       isValid = localregex.isZwMobile("263733220033");
+      expect(isValid, true);
     });
   });
 
@@ -193,6 +194,15 @@ void main() {
         type: FormatTypes.regular,
       );
       expect(number, '0777213388');
+    });
+  });
+
+  group("Test numbers with custom/funny formatting here", () {
+    test("Validate funny numbers", () {
+      bool isValid;
+
+      isValid = localregex.isZwMobile("+263 77 7213 388");
+      expect(isValid, true);
     });
   });
 }

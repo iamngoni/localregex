@@ -21,3 +21,6 @@ First release of localregex
 
 # 2.0.1
 * Allow 6 or 7 national id numbers (old and new id numbers)
+
+# 2.0.2
+* Fix on minor bug for numbers formatted in any way

@@ -36,13 +36,13 @@ class LocalRegex {
   bool isEmail(String value) => _isValid(value, _emailAddress);
 
   /// Checks if a string is a valid Netone mobile number
-  bool isNetone(String value) => _isValid(value, _netone);
+  bool isNetone(String value) => _isValid(value.replaceAll(RegExp('\\s+'), ""), _netone);
 
   /// Checks if a string is a valid Telecel mobile number
-  bool isTelecel(String value) => _isValid(value, _telecel);
+  bool isTelecel(String value) => _isValid(value.replaceAll(RegExp('\\s+'), ""), _telecel);
 
   /// Checks if a string is a valid Econet mobile number
-  bool isEconet(String value) => _isValid(value, _econet);
+  bool isEconet(String value) => _isValid(value.replaceAll(RegExp('\\s+'), ""), _econet);
 
   /// Checks if a string is a valid Zimbabwean mobile number registered under the top 3 mobile network providers
   bool isZwMobile(String value) =>
