@@ -1,10 +1,10 @@
 name: localregex
 description: Regular expressions package for popular patterns in Zimbabwe i.e. Passport Number, Mobile Numbers, Number Plates, etc
-version: 2.0.2
+version: 2.0.3+1
 homepage: https://www.iamngoni.co.zw/
 
 environment:
-  sdk: '>=2.10.4 <3.0.0'
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
   flutter:

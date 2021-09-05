@@ -1,4 +1,5 @@
 library localregex;
+
 import 'package:localregex/format-types.dart';
 
 class LocalRegex {
@@ -6,7 +7,7 @@ class LocalRegex {
   ///
   /// [LocalRegex] is a regex package developed by Ngonidzashe Mangudya
   final RegExp _emailAddress = new RegExp(
-      r"^[a-zA-Z0-9.a-zA-Z0-9!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
+      r"^[a-zA-Z0-9.a-zA-Z0-9!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+(.[a-zA-Z]+)*");
   final RegExp _econet = RegExp(r'(?:\+?263|0)(77|78)[0-9]{7}$');
   final RegExp _netone = RegExp(r'(?:\+?263|0)(71)[0-9]{7}$');
   final RegExp _telecel = RegExp(r'(?:\+?263|0)(73)[0-9]{7}$');
@@ -36,13 +37,16 @@ class LocalRegex {
   bool isEmail(String value) => _isValid(value, _emailAddress);
 
   /// Checks if a string is a valid Netone mobile number
-  bool isNetone(String value) => _isValid(value.replaceAll(RegExp('\\s+'), ""), _netone);
+  bool isNetone(String value) =>
+      _isValid(value.replaceAll(RegExp('\\s+'), ""), _netone);
 
   /// Checks if a string is a valid Telecel mobile number
-  bool isTelecel(String value) => _isValid(value.replaceAll(RegExp('\\s+'), ""), _telecel);
+  bool isTelecel(String value) =>
+      _isValid(value.replaceAll(RegExp('\\s+'), ""), _telecel);
 
   /// Checks if a string is a valid Econet mobile number
-  bool isEconet(String value) => _isValid(value.replaceAll(RegExp('\\s+'), ""), _econet);
+  bool isEconet(String value) =>
+      _isValid(value.replaceAll(RegExp('\\s+'), ""), _econet);
 
   /// Checks if a string is a valid Zimbabwean mobile number registered under the top 3 mobile network providers
   bool isZwMobile(String value) =>
@@ -61,9 +65,9 @@ class LocalRegex {
   bool isZwDriversLicence(String value) => _isValid(value, _driversLicence);
 
   /// Checks if mobile number is a valid Zimbabwean mobile number (Econet, Netone & Telecel) and returns a formatted version
-  String formatIfIsZimbabwe(
-      {String value, FormatTypes type}) {
-    String _number;
+  String? formatIfIsZimbabwe(
+      {required String value, required FormatTypes type}) {
+    String? _number;
     if (this.isZwMobile(value)) {
       if (type == FormatTypes.common) {
         _number = _formatCommon(value);

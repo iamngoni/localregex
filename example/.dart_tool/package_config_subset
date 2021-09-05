@@ -1,3 +1,7 @@
+localregex
+2.12
+file:///home/iamngoni/Downloads/Compressed/localregex-2.0.3/
+file:///home/iamngoni/Downloads/Compressed/localregex-2.0.3/lib/
 async
 2.12
 file:///home/iamngoni/dev-tools/flutter_sdk/.pub-cache/hosted/pub.dartlang.org/async-2.6.1/
@@ -86,12 +90,8 @@ flutter_test
 2.12
 file:///home/iamngoni/dev-tools/flutter_sdk/packages/flutter_test/
 file:///home/iamngoni/dev-tools/flutter_sdk/packages/flutter_test/lib/
-localregex
-2.10
-file:///home/iamngoni/projects/localregex/
-file:///home/iamngoni/projects/localregex/lib/
 example
 2.7
-file:///home/iamngoni/projects/localregex/example/
-file:///home/iamngoni/projects/localregex/example/lib/
+file:///home/iamngoni/Downloads/Compressed/localregex-2.0.3/example/
+file:///home/iamngoni/Downloads/Compressed/localregex-2.0.3/example/lib/
 2

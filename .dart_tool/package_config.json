@@ -131,10 +131,10 @@
       "name": "localregex",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.10"
+      "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-09-05T18:07:00.192452Z",
+  "generated": "2021-09-05T18:11:43.740772Z",
   "generator": "pub",
   "generatorVersion": "2.13.4"
 }
