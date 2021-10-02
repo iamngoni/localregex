@@ -19,6 +19,7 @@ class LocalRegex {
   static RegExp _driversLicence = RegExp(r'\d{5}[a-zA-Z]{2}');
   static RegExp _password =
       RegExp(r"^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$");
+  static RegExp _extraMobile = RegExp(r'^([+]\d{2})?\d{10}$');
 
   /// Match full string
   static bool _isValid(String value, RegExp source) {
@@ -69,9 +70,14 @@ class LocalRegex {
   static bool isZwDriversLicence(String value) =>
       _isValid(value, _driversLicence);
 
+  /// Validate passwords [MIN: 8 characters, 1 Capital, 1 special character, 1 Number]
   static bool isValidPassword(String value) => _isValid(value, _password);
 
-  /// Checks if mobile number is a valid Zimbabwean mobile number (Econet, Netone & Telecel) and returns a formatted version
+  /// Validate is mobile number is valid
+  /// If you're validate Zim numbers we recommend using [isValidZimMobile]
+  static bool isValidMobile(String value) => _isValid(value, _extraMobile);
+
+  /// Checks if mobile number is a valid Zimbabwean mobile number [isEconet] or [isTelecel] or [isNetone] and returns a formatted version
   static String? formatNumber(
       {required String value, required FormatTypes type}) {
     String? _number;
