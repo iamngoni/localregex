@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:localregex/localregex.dart';
+import 'package:localregex/format_types.dart';
 
 void main() {
   test('Validate email address', () {

@@ -1,5 +1,10 @@
+## 3.0.0+1
+* Updated README.md
+* Documentation
+
+
 ## 3.0.0
-> This version brings **breaking changes** which need to be carefully looked into.
+* This version brings **breaking changes** which need to be carefully looked into.
 * All methods are now static which means no more declaration and initialization
 * Changes into naming of methods e.g isZwMobile => isValidZimMobile to make them more descriptive
 * Password validation is now available

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:localregex/regex.dart';
+import 'package:localregex/localregex.dart';
 
 void main() {
   runApp(MyApp());

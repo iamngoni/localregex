@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="generator" content="made with love by dartdoc 3.1.0">
+  <meta name="description" content="localregex API docs, for the Dart programming language.">
+  <title>localregex - Dart API docs</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href=""
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="https://www.iamngoni.co.zw/">localregex package</a></li>
+  </ol>
+  <div class="self-name">localregex</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-main-content" class="main-content">
+      
+<section class="desc markdown">
+  <h1 id="localregex">LocalRegex</h1>
+<p>This plugin allows developers to check if an input matches common regex patterns in Zimbabwe and other countries.
+This plugin works for all Flutter supported platforms i.e. Android, iOS, Web and Desktop (Linux, Windows &amp; MacOS).</p>
+<blockquote>
+<p>Developed by Ngonidzashe Mangudya.</p>
+</blockquote>
+<h2 id="usage">Usage</h2>
+<h3 id="add-dependency">Add dependency</h3>
+<pre class="language-yaml"><code class="language-yaml">dependencies:
+  localregex: ^3.0.0+1
+</code></pre>
+<h3 id="or">Or</h3>
+<pre class="language-shell"><code class="language-shell">flutter pub add localregex
+</code></pre>
+<h3 id="import-package">Import package</h3>
+<pre class="language-dart"><code class="language-dart">  import 'package:localregex/localregex.dart';
+</code></pre>
+<blockquote>
+<p>Note that declaration and initialization is no longer necessary</p>
+</blockquote>
+<h3 id="check-if-a-mobile-number-matches-patterns-for-econet-netone-or-telecel-numbers">Check if a mobile number matches patterns for Econet, Netone or Telecel numbers</h3>
+<pre class="language-dart"><code class="language-dart">LocalRegex.isNetone('mobile_number');
+LocalRegex.isEconet('mobile_number');
+LocalRegex.isTelecel('mobile_number');
+</code></pre>
+<h3 id="check-if-a-mobile-number-matches-any-of-the-patterns-for-econet-netone-or-telecel">Check if a mobile number matches any of the patterns for Econet, Netone or Telecel</h3>
+<pre class="language-dart"><code class="language-dart">LocalRegex.isValidZimMobile('mobile_number');
+</code></pre>
+<h3 id="check-if-mobile-number-is-valid-recommended-for-numbers-not-from-zimbabwe">Check if mobile number is valid (recommended for numbers not from Zimbabwe)</h3>
+<pre class="language-dart"><code class="language-dart">LocalRegex.isValidMobile('mobile_number');
+</code></pre>
+<h3 id="check-if-a-supplied-email-matches-proper-email-patterns">Check if a supplied email matches proper email patterns</h3>
+<pre class="language-dart"><code class="language-dart">localregex.isEmail('email_address');
+</code></pre>
+<h3 id="check-if-a-supplied-national-id-matches-the-pattern-for-zimbabwean-national-id">Check if a supplied national id matches the pattern for Zimbabwean national id</h3>
+<pre class="language-dart"><code class="language-dart">localregex.isValidZimID('national_id');
+</code></pre>
+<h3 id="check-passport-number">Check passport number</h3>
+<pre class="language-dart"><code class="language-dart">localregex.isValidZimPassport('passport_number');
+</code></pre>
+<h3 id="check-number-plate">Check number plate</h3>
+<pre class="language-dart"><code class="language-dart">localregex.isValidZimVehicleNumberPlate('number_plate');
+</code></pre>
+<h3 id="check-drivers-license">Check driver's license</h3>
+<pre class="language-dart"><code class="language-dart">localregex.isValidZimDriversLicence('drivers_license');
+</code></pre>
+<h3 id="check-mobile-number-and-returns-mobile-number-in-required-format-for-use-with-zim-numbers-only">Check mobile number and returns mobile number in required format (for use with Zim numbers only)</h3>
+<pre class="language-dart"><code class="language-dart">String? number = LocalRegex.formatNumber(
+  value: '+263777213388',
+  type: FormatTypes.regular,
+);
+</code></pre>
+<h3 id="check-if-password-is-valid-minimum-of-8-characters-at-least-1-special-character-1-capital-letter-1-numeric-character">Check if password is valid (minimum of 8 characters, at least 1 special character, 1 capital letter, 1 numeric character)</h3>
+<pre class="language-dart"><code class="language-dart">LocalRegex.isValidPassword('your_password');
+</code></pre>
+<h2 id="mobile-number-format-types">Mobile Number Format Types</h2>
+<h3 id="regular">Regular</h3>
+<blockquote>
+<p>This is the general format of mobile numbers e.g. 0777213388</p>
+</blockquote>
+<pre class="language-dart"><code class="language-dart">FormatTypes.regular
+</code></pre>
+<h3 id="common">Common</h3>
+<blockquote>
+<p>This is the mobile number format with country code but no + sign e.g. 263777213388</p>
+</blockquote>
+<pre class="language-dart"><code class="language-dart">FormatTypes.common
+</code></pre>
+<h3 id="common-plus">Common Plus</h3>
+<blockquote>
+<p>This is the mobile number format with country code and + sign e.g. +263777213388</p>
+</blockquote>
+<pre class="language-dart"><code class="language-dart">FormatTypes.commonPlus
+</code></pre>
+<h1 id="inbilt-teknolog-">Inbilt Teknolog ©</h1>
+</section>
+
+
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <dt id="enum">
+  <span class="name"><a href="enum/enum-library.html">enum</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="format_types">
+  <span class="name"><a href="format_types/format_types-library.html">format_types</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="localregex">
+  <span class="name"><a href="localregex/localregex-library.html">localregex</a></span> 
+
+</dt>
+<dd>Collection of common regex patterns 
+</dd>
+
+        </dl>
+      </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="https://www.iamngoni.co.zw/">localregex package</a></li>
+</ol>
+
+
+    <h5 class="hidden-xs"><span class="package-name">localregex</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="enum/enum-library.html">enum</a></li>
+      <li><a href="format_types/format_types-library.html">format_types</a></li>
+      <li><a href="localregex/localregex-library.html">localregex</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div>
+
+</main>
+
+<footer>
+  <span class="no-break">
+    localregex
+      3.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/script.js?v1"></script>
+
+
+
+</body>
+
+</html>
+
