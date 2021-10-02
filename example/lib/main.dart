@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:localregex/localregex.dart';
+import 'package:localregex/regex.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,13 +24,12 @@ class Example extends StatefulWidget {
 class _ExampleState extends State<Example> {
   bool _isMobile = false;
   final _formKey = GlobalKey<FormState>();
-  final localregex = LocalRegex();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text("localregex usage example"),
+          title: Text("LocalRegex usage example"),
         ),
         body: Container(
           height: MediaQuery.of(context).size.height * 0.9,
@@ -48,7 +47,7 @@ class _ExampleState extends State<Example> {
                     ),
                     // ignore: missing_return
                     validator: (value) {
-                      if (!localregex.isZwMobile(value)) {
+                      if (LocalRegex.isValidZimMobile(value)) {
                         return "Not a valid Zimbabwean mobile number";
                       }
                     },
@@ -57,7 +56,7 @@ class _ExampleState extends State<Example> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
-                    color: Theme.of(context).buttonColor,
+                    color: Colors.blue,
                     width: MediaQuery.of(context).size.width * 0.9,
                     child: MaterialButton(
                       onPressed: () {
