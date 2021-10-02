@@ -105,7 +105,7 @@ void main() {
 
   test("Validate driver's license number", () {
     // Act
-    bool isValid = LocalRegex.isZwDriversLicence("98336DM");
+    bool isValid = LocalRegex.isValidZimDriversLicence("98336DM");
     // Assert
     expect(isValid, true);
   });
@@ -119,7 +119,7 @@ void main() {
 
   test("Validate number plate", () {
     // Act
-    bool isValid = LocalRegex.isZwNumberPlate("ADW 4746");
+    bool isValid = LocalRegex.isValidZimVehicleNumberPlate("ADW 4746");
     // Assert
     expect(isValid, true);
   });

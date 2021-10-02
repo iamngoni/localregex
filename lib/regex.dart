@@ -64,10 +64,11 @@ class LocalRegex {
       _isValid(value, _passportNumber);
 
   /// Checks if a string is a valid Vehicle Number plate for Zimbabwe
-  static bool isZwNumberPlate(String value) => _isValid(value, _numberPlate);
+  static bool isValidZimVehicleNumberPlate(String value) =>
+      _isValid(value, _numberPlate);
 
   /// Checks if a string is a valid Driver's Licence for Zimbabwe
-  static bool isZwDriversLicence(String value) =>
+  static bool isValidZimDriversLicence(String value) =>
       _isValid(value, _driversLicence);
 
   /// Validate passwords [MIN: 8 characters, 1 Capital, 1 special character, 1 Number]
