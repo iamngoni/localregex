@@ -235,6 +235,12 @@ void main() {
       isValid = LocalRegex.isValidPassword("LocalRegex");
       expect(isValid, false);
     });
+
+    test("Validate password with no capital", () {
+      bool isValid;
+      isValid = LocalRegex.isValidPassword("loca@leg1ex");
+      expect(isValid, false);
+    });
   });
 
   // group("Test student IDS from Zim universities", () {

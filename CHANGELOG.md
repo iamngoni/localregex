@@ -1,3 +1,6 @@
+## 3.0.1
+* Fixed password regex
+
 ## 3.0.0+1
 * Updated README.md
 * Documentation

@@ -9,7 +9,7 @@ This plugin works for all Flutter supported platforms i.e. Android, iOS, Web and
 ### Add dependency
 ```yaml
 dependencies:
-  localregex: ^3.0.0+1
+  localregex: ^3.0.1
 ```
 
 ### Or
