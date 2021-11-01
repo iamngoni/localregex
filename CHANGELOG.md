@@ -1,3 +1,6 @@
+## 3.0.2
+* PasswordTextFormField
+
 ## 3.0.1
 * Fixed password regex
 

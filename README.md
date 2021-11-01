@@ -1,4 +1,8 @@
-# LocalRegex
+# [LocalRegex](https://pub.dev/packages/localregex/)
+
+<img src="https://img.shields.io/pub/v/localregex?style=for-the-badge">
+<img src="https://img.shields.io/github/last-commit/iamngoni/localregex">
+<img src="https://img.shields.io/twitter/url?label=iamngoni_&style=social&url=https%3A%2F%2Ftwitter.com%2Fiamngoni_">
 
 This plugin allows developers to check if an input matches common regex patterns in Zimbabwe and other countries.
 This plugin works for all Flutter supported platforms i.e. Android, iOS, Web and Desktop (Linux, Windows & MacOS).
@@ -9,7 +13,7 @@ This plugin works for all Flutter supported platforms i.e. Android, iOS, Web and
 ### Add dependency
 ```yaml
 dependencies:
-  localregex: ^3.0.1
+  localregex: ^3.0.2
 ```
 
 ### Or
@@ -99,4 +103,136 @@ FormatTypes.common
 FormatTypes.commonPlus
 ```
 
-# Inbilt Teknolog ©
+## PasswordTextFormField
+
+This a custom text form field that validates the password. It is recommended to use this field instead of the default text form field. It has the option to show which requirements have been met and which have not. The default password validation section can also be overwritten by supplying a function that returns a Widget.
+
+### Usage:
+
+```dart
+PasswordTextFormField(
+  controller: passwordController,
+  overrideValidationRow: true,
+  customValidationSection: customValidationSection,
+  decoration: InputDecoration(
+    border: InputBorder.none,
+  ),
+  autovalidateMode: AutovalidateMode.onUserInteraction,
+  showValidationRow: true,
+)
+```
+
+### Override Custom Validation Section
+Supply a function that returns a Widget that will be displayed in the validation section.
+
+#### Structure Of The Function
+```dart
+Widget customValidationSection({
+  required bool hasEightCharacters,
+  required bool hasCapitalLetter,
+  required bool hasSmallCapsLetter,
+  required bool hasADigit,
+  required bool hasASpecialCharacter,
+}) {
+  return Container(
+    height: 50,
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Row(
+          children: [
+            Text(
+              "🔠",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            Text(
+              hasCapitalLetter ? "✅" : "❌",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Text(
+              "🔡",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            Text(
+              hasSmallCapsLetter ? "✅" : "❌",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Text(
+              "🔢",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            Text(
+              hasADigit ? "✅" : "❌",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Text(
+              "🔣",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            Text(
+              hasASpecialCharacter ? "✅" : "❌",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Text(
+              "8️⃣ chars",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            Text(
+              hasCapitalLetter ? "✅" : "❌",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+          ],
+        ),
+      ],
+    ),
+  );
+}
+```
+
+## Screenshot
+<table>
+   <tr>
+      <td> Default</td>
+      <td> Using The Override Option</td>
+   </tr>
+   <tr>
+      <td><img src="screenshots/default.png"</td>
+      <td><img src="screenshots/override.png"</td>
+   </tr>
+</table>

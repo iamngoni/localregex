@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:localregex/localregex.dart';
+import 'package:localregex/password_validation/password_text_form_field.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,6 +25,7 @@ class Example extends StatefulWidget {
 class _ExampleState extends State<Example> {
   bool _isMobile = false;
   final _formKey = GlobalKey<FormState>();
+  final TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -45,9 +47,10 @@ class _ExampleState extends State<Example> {
                     decoration: InputDecoration(
                       labelText: "Mobile Number",
                     ),
+                    autovalidateMode: AutovalidateMode.onUserInteraction,
                     // ignore: missing_return
-                    validator: (value) {
-                      if (LocalRegex.isValidZimMobile(value)) {
+                    validator: (String? value) {
+                      if (!LocalRegex.isValidZimMobile(value!)) {
                         return "Not a valid Zimbabwean mobile number";
                       }
                     },
@@ -60,7 +63,7 @@ class _ExampleState extends State<Example> {
                     width: MediaQuery.of(context).size.width * 0.9,
                     child: MaterialButton(
                       onPressed: () {
-                        if (_formKey.currentState.validate()) {
+                        if (_formKey.currentState!.validate()) {
                           setState(() {
                             _isMobile = true;
                           });
@@ -88,6 +91,16 @@ class _ExampleState extends State<Example> {
                     ),
                   ),
                 ),
+                SizedBox(
+                  height: 100,
+                ),
+                PasswordTextFormField(
+                  controller: passwordController,
+                  overrideValidationRow: true,
+                  customValidationSection: customValidationSection,
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
+                  showValidationRow: true,
+                ),
               ],
             ),
           ),
@@ -95,4 +108,101 @@ class _ExampleState extends State<Example> {
       ),
     );
   }
+}
+
+Widget customValidationSection({
+  required bool hasEightCharacters,
+  required bool hasCapitalLetter,
+  required bool hasSmallCapsLetter,
+  required bool hasADigit,
+  required bool hasASpecialCharacter,
+}) {
+  return Container(
+    height: 50,
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Row(
+          children: [
+            Text(
+              "🔠",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            Text(
+              hasCapitalLetter ? "✅" : "❌",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Text(
+              "🔡",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            Text(
+              hasSmallCapsLetter ? "✅" : "❌",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Text(
+              "🔢",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            Text(
+              hasADigit ? "✅" : "❌",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Text(
+              "🔣",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            Text(
+              hasASpecialCharacter ? "✅" : "❌",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Text(
+              "8️⃣ chars",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            Text(
+              hasCapitalLetter ? "✅" : "❌",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+          ],
+        ),
+      ],
+    ),
+  );
 }

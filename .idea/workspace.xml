@@ -23,20 +23,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a518dc89-85a9-4fd8-ac83-b0849915a7b9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/iamngoni.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/iamngoni.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/regex.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/regex.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/localregex_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/localregex_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/__404error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/categories.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/enum/Enum-class.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/enum/Enum/Enum.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/enum/Enum/toString.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/enum/Enum/value.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/enum/enum-library.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/format_types/FormatTypes-class.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/format_types/FormatTypes/FormatTypes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/format_types/FormatTypes/common.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/format_types/FormatTypes/commonPlus.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/format_types/FormatTypes/regular.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/format_types/format_types-library.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/index.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex-class.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/LocalRegex.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/formatNumber.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/isEconet.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/isEmail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/isNetone.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/isTelecel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/isValidMobile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/isValidPassword.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/isValidZimDriversLicence.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/isValidZimID.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/isValidZimMobile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/isValidZimPassport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/isValidZimVehicleNumberPlate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/localregex/localregex-library.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/static-assets/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/static-assets/github.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/static-assets/highlight.pack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/static-assets/play_button.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/static-assets/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/static-assets/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/static-assets/styles.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/home/iamngoni/.android/avd/Pixel_4.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/home/iamngoni/.android/avd/Pixel_4_.avd]" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -46,6 +77,31 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="password_validation_test" />
+                    <option name="lastUsedInstant" value="1635756092" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1635756091" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="ProjectId" id="1okhY4j04wolFePgHiaL1OLEnjW" />
   <component name="ProjectLevelVcsManager">
@@ -61,9 +117,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="flutter.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/password_validation" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
@@ -96,15 +158,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="487" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1613840430910">
-      <screen x="42" y="27" width="1324" height="741" />
-    </state>
-    <state x="487" y="155" width="424" height="491" key="FileChooserDialogImpl/42.27.1324.741@42.27.1324.741" timestamp="1613840430910" />
-    <state x="192" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1618151643428">
-      <screen x="40" y="27" width="1326" height="741" />
-    </state>
-    <state x="192" y="31" width="1022" height="737" key="SettingsEditor/40.27.1326.741/1366.0.1366.768@40.27.1326.741" timestamp="1618151643428" />
   </component>
 </project>

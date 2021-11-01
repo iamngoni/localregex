@@ -44,7 +44,9 @@
   <div id="dartdoc-main-content" class="main-content">
       
 <section class="desc markdown">
-  <h1 id="localregex">LocalRegex</h1>
+  <h1 id="localregexhttpspubdevpackageslocalregex"><a href="https://pub.dev/packages/localregex/">LocalRegex</a></h1><img src="https://img.shields.io/pub/v/localregex?style=for-the-badge">
+<img src="https://img.shields.io/github/last-commit/iamngoni/localregex">
+<img src="https://img.shields.io/twitter/url?label=iamngoni_&amp;style=social&amp;url=https%3A%2F%2Ftwitter.com%2Fiamngoni_">
 <p>This plugin allows developers to check if an input matches common regex patterns in Zimbabwe and other countries.
 This plugin works for all Flutter supported platforms i.e. Android, iOS, Web and Desktop (Linux, Windows &amp; MacOS).</p>
 <blockquote>
@@ -53,7 +55,7 @@ This plugin works for all Flutter supported platforms i.e. Android, iOS, Web and
 <h2 id="usage">Usage</h2>
 <h3 id="add-dependency">Add dependency</h3>
 <pre class="language-yaml"><code class="language-yaml">dependencies:
-  localregex: ^3.0.0+1
+  localregex: ^3.0.2
 </code></pre>
 <h3 id="or">Or</h3>
 <pre class="language-shell"><code class="language-shell">flutter pub add localregex
@@ -118,7 +120,130 @@ LocalRegex.isTelecel('mobile_number');
 </blockquote>
 <pre class="language-dart"><code class="language-dart">FormatTypes.commonPlus
 </code></pre>
-<h1 id="inbilt-teknolog-">Inbilt Teknolog ©</h1>
+<h2 id="passwordtextformfield">PasswordTextFormField</h2>
+<p>This a custom text form field that validates the password. It is recommended to use this field instead of the default text form field. It has the option to show which requirements have been met and which have not. The default password validation section can also be overwritten by supplying a function that returns a Widget.</p>
+<h3 id="usage-2">Usage:</h3>
+<pre class="language-dart"><code class="language-dart">PasswordTextFormField(
+  controller: passwordController,
+  overrideValidationRow: true,
+  customValidationSection: customValidationSection,
+  decoration: InputDecoration(
+    border: InputBorder.none,
+  ),
+  autovalidateMode: AutovalidateMode.onUserInteraction,
+  showValidationRow: true,
+)
+</code></pre>
+<h3 id="override-custom-validation-section">Override Custom Validation Section</h3>
+<p>Supply a function that returns a Widget that will be displayed in the validation section.</p>
+<h4 id="structure-of-the-function">Structure Of The Function</h4>
+<pre class="language-dart"><code class="language-dart">Widget customValidationSection({
+  required bool hasEightCharacters,
+  required bool hasCapitalLetter,
+  required bool hasSmallCapsLetter,
+  required bool hasADigit,
+  required bool hasASpecialCharacter,
+}) {
+  return Container(
+    height: 50,
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Row(
+          children: [
+            Text(
+              "🔠",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            Text(
+              hasCapitalLetter ? "✅" : "❌",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Text(
+              "🔡",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            Text(
+              hasSmallCapsLetter ? "✅" : "❌",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Text(
+              "🔢",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            Text(
+              hasADigit ? "✅" : "❌",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Text(
+              "🔣",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            Text(
+              hasASpecialCharacter ? "✅" : "❌",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Text(
+              "8️⃣ chars",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            Text(
+              hasCapitalLetter ? "✅" : "❌",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+          ],
+        ),
+      ],
+    ),
+  );
+}
+</code></pre>
+<h2 id="screenshot">Screenshot</h2><table>
+   <tbody><tr>
+      <td> Default</td>
+      <td> Using The Override Option</td>
+   </tr>
+   <tr>
+      <td><img src="screenshots/default.png" <="" td="">
+      </td><td><img src="screenshots/override.png" <="" td="">
+   </td></tr>
+</tbody></table>
 </section>
 
 
@@ -146,6 +271,27 @@ LocalRegex.isTelecel('mobile_number');
 <dd>Collection of common regex patterns 
 </dd>
 
+          <dt id="password_text_form_field">
+  <span class="name"><a href="password_validation_password_text_form_field/password_validation_password_text_form_field-library.html">password_text_form_field</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="password_validation">
+  <span class="name"><a href="password_validation/password_validation-library.html">password_validation</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="password_validation_section">
+  <span class="name"><a href="password_validation_password_validation_section/password_validation_password_validation_section-library.html">password_validation_section</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
         </dl>
       </section>
 
@@ -169,6 +315,9 @@ LocalRegex.isTelecel('mobile_number');
       <li><a href="enum/enum-library.html">enum</a></li>
       <li><a href="format_types/format_types-library.html">format_types</a></li>
       <li><a href="localregex/localregex-library.html">localregex</a></li>
+      <li><a href="password_validation_password_text_form_field/password_validation_password_text_form_field-library.html">password_text_form_field</a></li>
+      <li><a href="password_validation/password_validation-library.html">password_validation</a></li>
+      <li><a href="password_validation_password_validation_section/password_validation_password_validation_section-library.html">password_validation_section</a></li>
 </ol>
 
   </div>
@@ -181,7 +330,7 @@ LocalRegex.isTelecel('mobile_number');
 <footer>
   <span class="no-break">
     localregex
-      3.0.0+1
+      3.0.2
   </span>
 
   
