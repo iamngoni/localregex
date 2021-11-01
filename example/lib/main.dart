@@ -49,8 +49,8 @@ class _ExampleState extends State<Example> {
                     ),
                     autovalidateMode: AutovalidateMode.onUserInteraction,
                     // ignore: missing_return
-                    validator: (value) {
-                      if (!LocalRegex.isValidZimMobile(value)) {
+                    validator: (String? value) {
+                      if (!LocalRegex.isValidZimMobile(value!)) {
                         return "Not a valid Zimbabwean mobile number";
                       }
                     },
@@ -63,7 +63,7 @@ class _ExampleState extends State<Example> {
                     width: MediaQuery.of(context).size.width * 0.9,
                     child: MaterialButton(
                       onPressed: () {
-                        if (_formKey.currentState.validate()) {
+                        if (_formKey.currentState!.validate()) {
                           setState(() {
                             _isMobile = true;
                           });
@@ -111,11 +111,11 @@ class _ExampleState extends State<Example> {
 }
 
 Widget customValidationSection({
-  @required bool hasEightCharacters,
-  @required bool hasCapitalLetter,
-  @required bool hasSmallCapsLetter,
-  @required bool hasADigit,
-  @required bool hasASpecialCharacter,
+  required bool hasEightCharacters,
+  required bool hasCapitalLetter,
+  required bool hasSmallCapsLetter,
+  required bool hasADigit,
+  required bool hasASpecialCharacter,
 }) {
   return Container(
     height: 50,
