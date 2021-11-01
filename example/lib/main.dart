@@ -100,6 +100,7 @@ class _ExampleState extends State<Example> {
                   customValidationSection: customValidationSection,
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   showValidationRow: true,
+                  debugPrintLoud: true,
                 ),
               ],
             ),
@@ -195,7 +196,7 @@ Widget customValidationSection({
               ),
             ),
             Text(
-              hasCapitalLetter ? "✅" : "❌",
+              hasEightCharacters ? "✅" : "❌",
               style: TextStyle(
                 fontSize: 20,
               ),

@@ -12,9 +12,15 @@ class PasswordTextFormField extends StatefulWidget {
     this.autovalidateMode = AutovalidateMode.onUserInteraction,
     this.obscureText = true,
     this.obscuringCharacter = "*",
+    this.style,
+    this.keyboardType = TextInputType.text,
     this.showValidationRow = true,
     this.overrideValidationRow = false,
     this.customValidationSection,
+    this.debugPrintLoud = false,
+    this.textColor = Colors.white,
+    this.textFontWeight = FontWeight.normal,
+    this.textFontSize = 15,
   }) : super(key: key);
 
   /// The controller required by the password
@@ -41,6 +47,13 @@ class PasswordTextFormField extends StatefulWidget {
   ///
   final String obscuringCharacter;
 
+  /// TextStyle for the password [TextFormField]
+  final TextStyle? style;
+
+  /// Type of keyboard to be shown to the user.
+  /// This defaults to [TextInputType.text]
+  final TextInputType? keyboardType;
+
   /// Determines whether or not to show the
   /// row that shows which requirements have been met
   ///
@@ -55,6 +68,23 @@ class PasswordTextFormField extends StatefulWidget {
   /// on the validation section
   ///
   final Function? customValidationSection;
+
+  /// Set whether the controller listener should also
+  /// print out the boolean values
+  ///
+  final bool debugPrintLoud;
+
+  /// Color of the validation text
+  ///
+  final Color textColor;
+
+  /// Font size of the validation text
+  ///
+  final double textFontSize;
+
+  /// Font weight of the validation text
+  ///
+  final FontWeight textFontWeight;
 
   @override
   State<PasswordTextFormField> createState() => _PasswordTextFormFieldState();
@@ -99,6 +129,19 @@ class _PasswordTextFormFieldState extends State<PasswordTextFormField> {
 
       setState(() => hasSmallCapsLetter =
           widget.controller.text.contains(RegExp(r'[a-z]')));
+
+      if (widget.debugPrintLoud) {
+        debugPrint(
+            "Has capital letter: ${widget.controller.text.contains(RegExp(r'[A-Z]'))}");
+        debugPrint(
+            "Has small letter: ${widget.controller.text.contains(RegExp(r'[a-z]'))}");
+        debugPrint(
+            "Has digits: ${widget.controller.text.contains(RegExp(r'[0-9]'))}");
+        debugPrint(
+            "Has special characters: ${widget.controller.text.contains(RegExp(r'[!@#\$&*~^%()+=|]'))}");
+        debugPrint(
+            "Has at least 8 characters: ${widget.controller.text.length >= 8}");
+      }
     });
     super.initState();
   }
@@ -123,11 +166,16 @@ class _PasswordTextFormFieldState extends State<PasswordTextFormField> {
                       hasSmallCapsLetter: hasSmallCapsLetter,
                       hasADigit: hasADigit,
                       hasASpecialCharacter: hasASpecialCharacter,
+                      textColor: widget.textColor,
+                      textFontSize: widget.textFontSize,
+                      textFontWeight: widget.textFontWeight,
                     )
               : SizedBox.shrink(),
           TextFormField(
             controller: widget.controller,
             decoration: widget.decoration,
+            style: widget.style,
+            keyboardType: widget.keyboardType,
             autovalidateMode: widget.autovalidateMode,
             obscureText: widget.obscureText,
             obscuringCharacter: widget.obscuringCharacter,
