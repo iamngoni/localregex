@@ -232,7 +232,7 @@ Widget customValidationSection({
       <td> Using The Override Option</td>
    </tr>
    <tr>
-      <td><img src="screenshots/default.png"</td>
-      <td><img src="screenshots/override.png"</td>
+      <td><img src="./screenshots/default.png"</td>
+      <td><img src="./screenshots/override.png"</td>
    </tr>
 </table>

@@ -23,44 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a518dc89-85a9-4fd8-ac83-b0849915a7b9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/__404error.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/categories.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/enum/Enum-class.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/enum/Enum/Enum.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/enum/Enum/toString.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/enum/Enum/value.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/enum/enum-library.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/format_types/FormatTypes-class.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/format_types/FormatTypes/FormatTypes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/format_types/FormatTypes/common.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/format_types/FormatTypes/commonPlus.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/format_types/FormatTypes/regular.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/format_types/format_types-library.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/index.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex-class.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/LocalRegex.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/formatNumber.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/isEconet.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/isEmail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/isNetone.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/isTelecel.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/isValidMobile.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/isValidPassword.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/isValidZimDriversLicence.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/isValidZimID.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/isValidZimMobile.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/isValidZimPassport.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/localregex/LocalRegex/isValidZimVehicleNumberPlate.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/localregex/localregex-library.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/static-assets/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/static-assets/github.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/static-assets/highlight.pack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/static-assets/play_button.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/static-assets/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/static-assets/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/static-assets/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
