@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:localregex/localregex.dart';
 import 'package:localregex/format_types.dart';
+import 'package:localregex/localregex.dart';
 
 void main() {
   test('Validate email address', () {
@@ -214,7 +214,7 @@ void main() {
   group("Test passwords", () {
     test("Validate password with correct password", () {
       bool isValid;
-      isValid = LocalRegex.isValidPassword("L0c@lRegex");
+      isValid = LocalRegex.isValidPassword("L0c@lRegex|");
       expect(isValid, true);
     });
 
