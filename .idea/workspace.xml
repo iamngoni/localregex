@@ -23,6 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a518dc89-85a9-4fd8-ac83-b0849915a7b9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/api/__404error.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/api/categories.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/api/enum/Enum-class.html" beforeDir="false" />
