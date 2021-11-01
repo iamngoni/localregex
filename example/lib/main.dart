@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:localregex/localregex.dart';
+import 'package:localregex/password_text_form_field.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,6 +25,7 @@ class Example extends StatefulWidget {
 class _ExampleState extends State<Example> {
   bool _isMobile = false;
   final _formKey = GlobalKey<FormState>();
+  final TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -45,9 +47,10 @@ class _ExampleState extends State<Example> {
                     decoration: InputDecoration(
                       labelText: "Mobile Number",
                     ),
+                    autovalidateMode: AutovalidateMode.onUserInteraction,
                     // ignore: missing_return
                     validator: (value) {
-                      if (LocalRegex.isValidZimMobile(value)) {
+                      if (!LocalRegex.isValidZimMobile(value)) {
                         return "Not a valid Zimbabwean mobile number";
                       }
                     },
@@ -87,6 +90,12 @@ class _ExampleState extends State<Example> {
                       color: _isMobile ? Colors.green : Colors.red,
                     ),
                   ),
+                ),
+                SizedBox(
+                  height: 100,
+                ),
+                PasswordTextFormField(
+                  controller: passwordController,
                 ),
               ],
             ),
