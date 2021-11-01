@@ -1,5 +1,8 @@
+## 3.0.2+2
+* PasswordTextFormField: dispose controller
+
 ## 3.0.2+1
-* PasswordTextFormField styling
+* PasswordTextFormField: styling
 
 ## 3.0.2
 * PasswordTextFormField
