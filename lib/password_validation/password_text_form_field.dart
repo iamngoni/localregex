@@ -147,6 +147,12 @@ class _PasswordTextFormFieldState extends State<PasswordTextFormField> {
   }
 
   @override
+  void dispose() {
+    widget.controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Container(
       child: Column(
