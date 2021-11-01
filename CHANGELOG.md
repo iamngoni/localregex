@@ -1,3 +1,12 @@
+## 3.0.2+3
+* Password regex: Add more special characters
+
+## 3.0.2+2
+* PasswordTextFormField: dispose controller
+
+## 3.0.2+1
+* PasswordTextFormField: styling
+
 ## 3.0.2
 * PasswordTextFormField
 

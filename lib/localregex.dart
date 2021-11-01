@@ -18,8 +18,8 @@ class LocalRegex {
   static RegExp _numberPlate = RegExp(r'^[A-Z]{3}(-|\s)[0-9]{4}$');
   static RegExp _passportNumber = RegExp(r'^[A-Z]{2}[0-9]{6}$');
   static RegExp _driversLicence = RegExp(r'\d{5}[a-zA-Z]{2}');
-  static RegExp _password =
-      RegExp(r"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$");
+  static RegExp _password = RegExp(
+      r"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~^%()+=|]).{8,}$");
   static RegExp _extraMobile = RegExp(r'^([+]\d{2})?\d{10}$');
 
   /// Match full string
