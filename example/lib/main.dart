@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:localregex/localregex.dart';
-import 'package:localregex/password_text_form_field.dart';
+import 'package:localregex/password_validation/password_text_form_field.dart';
 
 void main() {
   runApp(MyApp());
@@ -96,6 +96,10 @@ class _ExampleState extends State<Example> {
                 ),
                 PasswordTextFormField(
                   controller: passwordController,
+                  overrideValidationRow: true,
+                  customValidationSection: customValidationSection,
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
+                  showValidationRow: true,
                 ),
               ],
             ),
@@ -104,4 +108,101 @@ class _ExampleState extends State<Example> {
       ),
     );
   }
+}
+
+Widget customValidationSection({
+  @required bool hasEightCharacters,
+  @required bool hasCapitalLetter,
+  @required bool hasSmallCapsLetter,
+  @required bool hasADigit,
+  @required bool hasASpecialCharacter,
+}) {
+  return Container(
+    height: 50,
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Row(
+          children: [
+            Text(
+              "🔠",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            Text(
+              hasCapitalLetter ? "✅" : "❌",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Text(
+              "🔡",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            Text(
+              hasSmallCapsLetter ? "✅" : "❌",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Text(
+              "🔢",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            Text(
+              hasADigit ? "✅" : "❌",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Text(
+              "🔣",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            Text(
+              hasASpecialCharacter ? "✅" : "❌",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Text(
+              "8️⃣ chars",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            Text(
+              hasCapitalLetter ? "✅" : "❌",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+          ],
+        ),
+      ],
+    ),
+  );
 }
