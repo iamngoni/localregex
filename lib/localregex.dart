@@ -10,16 +10,16 @@ class LocalRegex {
   /// [LocalRegex] is a regex package developed by Ngonidzashe Mangudya
   static final RegExp _emailAddress = new RegExp(
       r"^[a-zA-Z0-9.a-zA-Z0-9!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+(.[a-zA-Z]+)*");
-  static RegExp _econet = RegExp(r'(?:\+?263|0)(77|78)[0-9]{7}$');
-  static RegExp _netone = RegExp(r'(?:\+?263|0)(71)[0-9]{7}$');
-  static RegExp _telecel = RegExp(r'(?:\+?263|0)(73)[0-9]{7}$');
+  static RegExp _econet = RegExp(r'(?:\+?263|0)(77|78)\d{7}$');
+  static RegExp _netone = RegExp(r'(?:\+?263|0)(71)\d{7}$');
+  static RegExp _telecel = RegExp(r'(?:\+?263|0)(73)\d{7}$');
   static RegExp _nationalId =
-      RegExp(r'^([0-9]{2})(-|\s)([0-9]{6,7})(\s)([A-Z]{1})(\s)*([0-9]{2})$');
-  static RegExp _numberPlate = RegExp(r'^[A-Z]{3}(-|\s)[0-9]{4}$');
-  static RegExp _passportNumber = RegExp(r'^[A-Z]{2}[0-9]{6}$');
+      RegExp(r'^(\d{2})(-|\s)(\d{6,7})(\s)([A-Z]{1})(\s)*(\d{2})$');
+  static RegExp _numberPlate = RegExp(r'^[A-Z]{3}(-|\s)\d{4}$');
+  static RegExp _passportNumber = RegExp(r'^[A-Z]{2}\d{6}$');
   static RegExp _driversLicence = RegExp(r'\d{5}[a-zA-Z]{2}');
   static RegExp _password = RegExp(
-      r"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~^%()+=|]).{8,}$");
+      r"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?\d)(?=.*?[!@#\$&*~^%()+=|]).{8,}$");
   static RegExp _extraMobile = RegExp(r'^([+]\d{2})?\d{10}$');
 
   /// Match full string
