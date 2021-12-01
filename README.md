@@ -7,7 +7,7 @@
 This plugin allows developers to check if an input matches common regex patterns in Zimbabwe and other countries.
 This plugin works for all Flutter supported platforms i.e. Android, iOS, Web and Desktop (Linux, Windows & MacOS).
 
-> Developed by Ngonidzashe Mangudya.
+> Developed by Ngonidzashe Mangudya. Special shoutout to [Kudakwashe Kuzvindiwana](https://github.com/kudak3) for his help.
 
 ## Usage
 ### Add dependency
