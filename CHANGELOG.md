@@ -1,3 +1,6 @@
+## 3.0.2+4
+* Regex consistency
+
 ## 3.0.2+3
 * Password regex: Add more special characters
 

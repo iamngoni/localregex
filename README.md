@@ -13,7 +13,7 @@ This plugin works for all Flutter supported platforms i.e. Android, iOS, Web and
 ### Add dependency
 ```yaml
 dependencies:
-  localregex: ^3.0.2+3
+  localregex: ^3.0.2+4
 ```
 
 ### Or
@@ -232,7 +232,7 @@ Widget customValidationSection({
       <td> Using The Override Option</td>
    </tr>
    <tr>
-      <td><img src="./screenshots/default.png"</td>
-      <td><img src="./screenshots/override.png"</td>
+      <td><img src="http://u.filein.io/gvmJnQ85hS.png"/></td>
+      <td><img src="http://u.filein.io/rXtyoy8Pzd.png"/></td>
    </tr>
 </table>
