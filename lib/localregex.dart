@@ -22,6 +22,15 @@ class LocalRegex {
       r"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~^%()+=|]).{8,}$");
   static RegExp _extraMobile = RegExp(r'^([+]\d{2})?\d{10}$');
 
+      /// Add support for VOIP numbers
+  static final RegExp _africom = RegExp(r'(?:\+?263|0)(8644)\d{6}$');
+  static final RegExp _datemutande = RegExp(r'(?:\+?263|0)(8612)\d{6}$');
+  static final RegExp _liquid = RegExp(r'(?:\+?263|0)(8677)\d{6}$');
+  static final RegExp _powertel = RegExp(r'(?:\+?263|0)(8611)\d{6}$');
+  static final RegExp _telco = RegExp(r'(?:\+?263|0)(8683)\d{6}$');
+  static final RegExp _telone = RegExp(r'(?:\+?263|0)(8688)\d{6}$');
+  static final RegExp _zarnet = RegExp(r'(?:\+?263|0)(8622)\d{6}$');
+
   /// Match full string
   static bool _isValid(String value, RegExp source) {
     try {
@@ -56,6 +65,33 @@ class LocalRegex {
   /// Checks if a string is a valid Zimbabwean mobile number registered under the top 3 mobile network providers
   static bool isValidZimMobile(String value) =>
       isEconet(value) || isNetone(value) || isTelecel(value);
+     
+       /// Checks if a string is a valid Africom VOIP number
+  static bool isAfricom(String value) => _isValid(value.replaceAll(RegExp('\\s+'), ""), _africom);
+
+    /// Checks if a string is a valid Dandemutande VOIP number
+  static bool isDandemutande(String value) =>  _isValid(value.replaceAll(RegExp('\\s+'), ""), _datemutande);
+
+    /// Checks if a string is a valid Liquid VOIP number
+  static bool isLiquid(String value) => _isValid(value.replaceAll(RegExp('\\s+'), ""), _liquid);
+
+    /// Checks if a string is a valid Powertel VOIP number
+  static bool isPowertel(String value) => _isValid(value.replaceAll(RegExp('\\s+'), ""), _powertel);
+
+    /// Checks if a string is a valid Telco VOIP number
+  static bool isTelco(String value) => _isValid(value.replaceAll(RegExp('\\s+'), ""), _telco);
+
+    /// Checks if a string is a valid Telone VOIP number
+  static bool isTelone(String value) => _isValid(value.replaceAll(RegExp('\\s+'), ""), _telone);
+
+      /// Checks if a string is a valid Zarnet VOIP number
+  static bool isZarnet(String value) => _isValid(value.replaceAll(RegExp('\\s+'), ""), _zarnet);
+
+    /// Checks if a string is a valid Zimbabwean voip number registered under the top 7 voip  providers
+  static bool isValidZimVoipNumber(String value) =>
+      isAfricom(value) || isDandemutande(value) || isLiquid(value) || isPowertel(value) 
+      || isTelco(value) || isTelone(value) || isZarnet(value);
+
 
   /// Checks if a string is a valid National ID number for Zimbabwe
   static bool isValidZimID(String value) => _isValid(value, _nationalId);
@@ -83,7 +119,7 @@ class LocalRegex {
   static String? formatNumber(
       {required String value, required FormatTypes type}) {
     String? _number;
-    if (isValidZimMobile(value)) {
+    if (isValidZimMobile(value) || isValidZimVoipNumber(value)) {
       if (type == FormatTypes.common) {
         _number = _formatCommon(value);
       } else if (type == FormatTypes.commonPlus) {
