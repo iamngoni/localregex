@@ -1,3 +1,6 @@
+## 3.0.3
+* VoIP numbers validation
+
 ## 3.0.2+4
 * Regex consistency
 

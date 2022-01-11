@@ -7,13 +7,13 @@
 This plugin allows developers to check if an input matches common regex patterns in Zimbabwe and other countries.
 This plugin works for all Flutter supported platforms i.e. Android, iOS, Web and Desktop (Linux, Windows & MacOS).
 
-> Developed by Ngonidzashe Mangudya. Special shoutout to [Kudakwashe Kuzvindiwana](https://github.com/kudak3) for his help.
+> Developed by Ngonidzashe Mangudya. Special shoutout to [Kudakwashe Kuzvindiwana](https://github.com/kudak3) for pushing this package the most.
 
 ## Usage
 ### Add dependency
 ```yaml
 dependencies:
-  localregex: ^3.0.2+4
+  localregex: ^3.0.3
 ```
 
 ### Or
@@ -232,7 +232,7 @@ Widget customValidationSection({
       <td> Using The Override Option</td>
    </tr>
    <tr>
-      <td><img src="http://u.filein.io/gvmJnQ85hS.png"/></td>
-      <td><img src="http://u.filein.io/rXtyoy8Pzd.png"/></td>
+      <td><img src="https://res.cloudinary.com/iamngoni/image/upload/v1641903927/default_bivxyk.png"/></td>
+      <td><img src="https://res.cloudinary.com/iamngoni/image/upload/v1641903839/override_eh09yg.png"/></td>
    </tr>
 </table>
