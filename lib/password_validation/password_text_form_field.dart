@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:localregex/password_validation/password_validation_section.dart';
 
 import '../localregex.dart';

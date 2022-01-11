@@ -271,21 +271,21 @@ void main() {
       expect(isValid, true);
     });
 
-     test(":Validate telco number +2638683", () {
+    test(":Validate telco number +2638683", () {
       // Act
       bool isValid = LocalRegex.isTelco("+2638683000000");
       // Assert
       expect(isValid, true);
     });
 
-         test(":Validate zarnet number +2638622", () {
+    test(":Validate zarnet number +2638622", () {
       // Act
       bool isValid = LocalRegex.isZarnet("+2638622009070");
       // Assert
       expect(isValid, true);
     });
 
-          test(":Validate telone number +2638688", () {
+    test(":Validate telone number +2638688", () {
       // Act
       bool isValid = LocalRegex.isTelone("+2638688003099");
       // Assert
@@ -293,7 +293,7 @@ void main() {
     });
   });
 
-   group("Test 263 VOIP numbers", () {
+  group("Test 263 VOIP numbers", () {
     test(":Validate africom number with 2638644", () {
       // Act
       bool isValid = LocalRegex.isAfricom("2638644105500");
@@ -321,28 +321,27 @@ void main() {
       expect(isValid, true);
     });
 
-     test(":Validate telco number 2638683", () {
+    test(":Validate telco number 2638683", () {
       // Act
       bool isValid = LocalRegex.isTelco("2638683000000");
       // Assert
       expect(isValid, true);
     });
 
-         test(":Validate zarnet number 2638622", () {
+    test(":Validate zarnet number 2638622", () {
       // Act
       bool isValid = LocalRegex.isZarnet("2638622009070");
       // Assert
       expect(isValid, true);
     });
 
-          test(":Validate telone number 2638688", () {
+    test(":Validate telone number 2638688", () {
       // Act
       bool isValid = LocalRegex.isTelone("2638688003099");
       // Assert
       expect(isValid, true);
     });
   });
-
 
   group("Test 086 voip numbers", () {
     test(":Validate africom number with 08644", () {
@@ -372,28 +371,27 @@ void main() {
       expect(isValid, true);
     });
 
-     test(":Validate telco number 08683", () {
+    test(":Validate telco number 08683", () {
       // Act
       bool isValid = LocalRegex.isTelco("08683000000");
       // Assert
       expect(isValid, true);
     });
 
-         test(":Validate zarnet number 08622", () {
+    test(":Validate zarnet number 08622", () {
       // Act
       bool isValid = LocalRegex.isZarnet("08622009070");
       // Assert
       expect(isValid, true);
     });
 
-          test(":Validate telone number 08688", () {
+    test(":Validate telone number 08688", () {
       // Act
       bool isValid = LocalRegex.isTelone("08688003099");
       // Assert
       expect(isValid, true);
     });
   });
-
 
   // group("Test student IDS from Zim universities", () {
   //   test("Harare Institute of Technology", () {
