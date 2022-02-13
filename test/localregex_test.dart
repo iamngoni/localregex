@@ -144,6 +144,13 @@ void main() {
       //Assert
       expect(isValid, true);
     });
+
+    test(":Validate national id with 7 numbers and not spaced", () {
+      // Act
+      bool isValid = LocalRegex.isValidZimID("75-5112188 K44");
+      //Assert
+      expect(isValid, true);
+    });
   });
 
   group("Testing if mobile numbers belongs to Econet or Netone or Telecel", () {
