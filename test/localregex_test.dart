@@ -400,6 +400,17 @@ void main() {
     });
   });
 
+  group("Test URLS", () {
+    test("Is Valid Url", () {
+      bool isValid = LocalRegex.isUrl("https://www.google.com");
+      expect(isValid, true);
+    });
+    test("Is Invalid Url", () {
+      bool isValid = LocalRegex.isUrl("www.helloworld");
+      expect(isValid, false);
+    });
+  });
+
   // group("Test student IDS from Zim universities", () {
   //   test("Harare Institute of Technology", () {
   //     bool isValid;

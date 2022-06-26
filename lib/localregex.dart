@@ -21,6 +21,8 @@ class LocalRegex {
   static RegExp _password = RegExp(
       r"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?\d)(?=.*?[!@#\$&*~^%()+=|]).{8,}$");
   static RegExp _extraMobile = RegExp(r'^([+]\d{2})?\d{10}$');
+  static RegExp _url = RegExp(
+      r'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)');
 
   /// Add support for VOIP numbers
   static final RegExp _africom = RegExp(r'(?:\+?263|0)(8644)\d{6}$');
@@ -125,6 +127,11 @@ class LocalRegex {
   /// Validate is mobile number is valid
   /// If you're validate Zim numbers we recommend using [isValidZimMobile]
   static bool isValidMobile(String value) => _isValid(value, _extraMobile);
+
+  /// isUrl
+  /// Validate if url is valid
+  ///
+  static bool isUrl(String value) => _isValid(value, _url);
 
   /// Checks if mobile number is a valid Zimbabwean mobile number [isEconet] or [isTelecel] or [isNetone] and returns a formatted version
   static String? formatNumber(

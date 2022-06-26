@@ -1,3 +1,6 @@
+## 3.0.4
+* URL Regex
+
 ## 3.0.3
 * VoIP numbers validation
 

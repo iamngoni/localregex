@@ -13,7 +13,7 @@ This plugin works for all Flutter supported platforms i.e. Android, iOS, Web and
 ### Add dependency
 ```yaml
 dependencies:
-  localregex: ^3.0.3
+  localregex: ^3.0.4
 ```
 
 ### Or
@@ -48,27 +48,32 @@ LocalRegex.isValidMobile('mobile_number');
 
 ### Check if a supplied email matches proper email patterns
 ```dart
-localregex.isEmail('email_address');
+LocalRegex.isEmail('email_address');
 ```
 
 ### Check if a supplied national id matches the pattern for Zimbabwean national id
 ```dart
-localregex.isValidZimID('national_id');
+LocalRegex.isValidZimID('national_id');
 ```
 
 ### Check passport number
 ```dart
-localregex.isValidZimPassport('passport_number');
+LocalRegex.isValidZimPassport('passport_number');
 ```
 
 ### Check number plate
 ```dart
-localregex.isValidZimVehicleNumberPlate('number_plate');
+LocalRegex.isValidZimVehicleNumberPlate('number_plate');
 ```
 
 ### Check driver's license
 ```dart
-localregex.isValidZimDriversLicence('drivers_license');
+LocalRegex.isValidZimDriversLicence('drivers_license');
+```
+
+### Check URL
+```dart
+LocalRegex.isUrl("https://www.google.com");
 ```
 
 ### Check mobile number and returns mobile number in required format (for use with Zim numbers only)
