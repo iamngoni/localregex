@@ -1,6 +1,6 @@
 name: localregex
 description: Collection of regex patterns commonly used in Zimbabwe. Regex patterns include mobile numbers, passports, vehicle license plates, driver's license, email addresses and passwords
-version: 3.0.4
+version: 3.0.5
 homepage: https://github.com/iamngoni/localregex
 
 environment:
