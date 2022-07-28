@@ -192,6 +192,8 @@ class _PasswordTextFormFieldState extends State<PasswordTextFormField> {
               if (!LocalRegex.isValidPassword(password)) {
                 return "Password does not meet requirements!";
               }
+
+              return null;
             },
           ),
         ],
