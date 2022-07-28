@@ -1,3 +1,7 @@
+## 3.0.5
+* Dates regex
+Matches YYYY-MM-DD or YYYY/MM/DD for now
+
 ## 3.0.4
 * URL Regex
 
