@@ -417,4 +417,18 @@ void main() {
   //     isValid = LocalRegex.isStudent.(value)
   //   });
   // });
+
+  group("Test dates", () {
+    test("Dates with /", () {
+      bool isValid;
+      isValid = LocalRegex.isDate("2022/07/28");
+      expect(isValid, true);
+    });
+
+    test("Dates with -", () {
+      bool isValid;
+      isValid = LocalRegex.isDate("2022-07-28");
+      expect(isValid, true);
+    });
+  });
 }

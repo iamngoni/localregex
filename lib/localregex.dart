@@ -10,28 +10,32 @@ class LocalRegex {
   /// [LocalRegex] is a regex package developed by Ngonidzashe Mangudya
   static final RegExp _emailAddress = new RegExp(
       r"^[a-zA-Z0-9.a-zA-Z0-9!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+(.[a-zA-Z]+)*");
-  static RegExp _econet = RegExp(r'(?:\+?263|0)(77|78)\d{7}$');
-  static RegExp _netone = RegExp(r'(?:\+?263|0)(71)\d{7}$');
-  static RegExp _telecel = RegExp(r'(?:\+?263|0)(73)\d{7}$');
+  static RegExp _econet = RegExp(r"(?:\+?263|0)(77|78)\d{7}$");
+  static RegExp _netone = RegExp(r"(?:\+?263|0)(71)\d{7}$");
+  static RegExp _telecel = RegExp(r"(?:\+?263|0)(73)\d{7}$");
   static RegExp _nationalId =
-      RegExp(r'^(\d{2})(-|\s)(\d{6,7})(\s)([A-Z]{1})(\s)*(\d{2})$');
-  static RegExp _numberPlate = RegExp(r'^[A-Z]{3}(-|\s)\d{4}$');
-  static RegExp _passportNumber = RegExp(r'^[A-Z]{2}\d{6}$');
-  static RegExp _driversLicence = RegExp(r'\d{5}[a-zA-Z]{2}');
+      RegExp(r"^(\d{2})(-|\s)(\d{6,7})(\s)([A-Z]{1})(\s)*(\d{2})$");
+  static RegExp _numberPlate = RegExp(r"^[A-Z]{3}(-|\s)\d{4}$");
+  static RegExp _passportNumber = RegExp(r"^[A-Z]{2}\d{6}$");
+  static RegExp _driversLicence = RegExp(r"\d{5}[a-zA-Z]{2}");
   static RegExp _password = RegExp(
       r"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?\d)(?=.*?[!@#\$&*~^%()+=|]).{8,}$");
-  static RegExp _extraMobile = RegExp(r'^([+]\d{2})?\d{10}$');
+  static RegExp _extraMobile = RegExp(r"^([+]\d{2})?\d{10}$");
   static RegExp _url = RegExp(
-      r'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)');
+      r"https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)");
 
   /// Add support for VOIP numbers
-  static final RegExp _africom = RegExp(r'(?:\+?263|0)(8644)\d{6}$');
-  static final RegExp _datemutande = RegExp(r'(?:\+?263|0)(8612)\d{6}$');
-  static final RegExp _liquid = RegExp(r'(?:\+?263|0)(8677)\d{6}$');
-  static final RegExp _powertel = RegExp(r'(?:\+?263|0)(8611)\d{6}$');
-  static final RegExp _telco = RegExp(r'(?:\+?263|0)(8683)\d{6}$');
-  static final RegExp _telone = RegExp(r'(?:\+?263|0)(8688)\d{6}$');
-  static final RegExp _zarnet = RegExp(r'(?:\+?263|0)(8622)\d{6}$');
+  static final RegExp _africom = RegExp(r"(?:\+?263|0)(8644)\d{6}$");
+  static final RegExp _datemutande = RegExp(r"(?:\+?263|0)(8612)\d{6}$");
+  static final RegExp _liquid = RegExp(r"(?:\+?263|0)(8677)\d{6}$");
+  static final RegExp _powertel = RegExp(r"(?:\+?263|0)(8611)\d{6}$");
+  static final RegExp _telco = RegExp(r"(?:\+?263|0)(8683)\d{6}$");
+  static final RegExp _telone = RegExp(r"(?:\+?263|0)(8688)\d{6}$");
+  static final RegExp _zarnet = RegExp(r"(?:\+?263|0)(8622)\d{6}$");
+
+  /// Dates
+  static final RegExp _date = RegExp(
+      r"^(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$");
 
   /// Match full string
   static bool _isValid(String value, RegExp source) {
@@ -132,6 +136,11 @@ class LocalRegex {
   /// Validate if url is valid
   ///
   static bool isUrl(String value) => _isValid(value, _url);
+
+  /// isDate
+  /// Validate if date is valid
+  ///
+  static bool isDate(String value) => _isValid(value, _date);
 
   /// Checks if mobile number is a valid Zimbabwean mobile number [isEconet] or [isTelecel] or [isNetone] and returns a formatted version
   static String? formatNumber(
