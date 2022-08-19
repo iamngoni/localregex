@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:localregex/localregex.dart';
+import 'package:localregex/src/extensions.dart';
+import 'package:localregex/src/format_type.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -30,7 +32,7 @@ void main() {
 
         test('+26377 -> Econet Mobile Number', () {
           final isValid = LocalRegex.isEconet('+263777213388');
-          // Assert
+
           expect(isValid, true);
         });
 
@@ -111,6 +113,29 @@ void main() {
         isValid = LocalRegex.isZimMobile('263733220033');
         expect(isValid, true);
       });
+
+      group('Formatting Mobile Numbers', () {
+        test('countryCode Format (263)', () {
+          final number = '0777213388'.formatNumber(FormatType.countryCode);
+          expect(number, '263777213388');
+        });
+
+        test('countryCodePlus Format (+263)', () {
+          final number =
+              '263777213388'.formatNumber(FormatType.countryCodePlus);
+          expect(number, '+263777213388');
+        });
+
+        test('regular Format (07)', () {
+          final number = '+263777213388'.formatNumber(FormatType.regular);
+          expect(number, '0777213388');
+        });
+      });
+
+      test('Validate Numbers With Funny Formats', () {
+        final isValid = LocalRegex.isZimMobile('+263 77 7213 388');
+        expect(isValid, true);
+      });
     });
 
     group('Identity', () {
@@ -149,6 +174,170 @@ void main() {
           final isValid = LocalRegex.isZimID('75-5112188 K44');
           expect(isValid, true);
         });
+      });
+    });
+
+    group('Passwords', () {
+      test('Correct Password Format', () {
+        final isValid = LocalRegex.isPassword('L0c@lRegex|');
+        expect(isValid, true);
+      });
+
+      test('With Missing Number', () {
+        final isValid = LocalRegex.isPassword('Loc@lRegex');
+        expect(isValid, false);
+      });
+
+      test('With Missing Character', () {
+        final isValid = LocalRegex.isPassword('L0calRegex');
+        expect(isValid, false);
+      });
+
+      test('No special characters and no numbers', () {
+        final isValid = LocalRegex.isPassword('LocalRegex');
+        expect(isValid, false);
+      });
+
+      test('With No Capital Letter', () {
+        final isValid = LocalRegex.isPassword('loca@leg1ex');
+        expect(isValid, false);
+      });
+    });
+
+    group('VoIP Numbers', () {
+      group('+263 VOIP Numbers', () {
+        test('+2638644 -> Africom VoIP Number', () {
+          final isValid = LocalRegex.isAfricom('+2638644105500');
+          expect(isValid, true);
+        });
+
+        test('+2638612 -> Dandemutande VoIP Number', () {
+          final isValid = LocalRegex.isDandemutande('+2638612003000');
+          expect(isValid, true);
+        });
+
+        test('+2638677 -> Liquid VoIP Number', () {
+          final isValid = LocalRegex.isLiquid('+2638677020251');
+          expect(isValid, true);
+        });
+
+        test('+2638611 -> Powertel VoIP Number', () {
+          final isValid = LocalRegex.isPowertel('+2638611208281');
+          expect(isValid, true);
+        });
+
+        test('+2638683 -> Telco VoIP Number', () {
+          final isValid = LocalRegex.isTelco('+2638683000000');
+          expect(isValid, true);
+        });
+
+        test('+2638622 -> Zarnet VoIP Number', () {
+          final isValid = LocalRegex.isZarnet('+2638622009070');
+          expect(isValid, true);
+        });
+
+        test('+2638688 -> Telone VoIP Number', () {
+          final isValid = LocalRegex.isTelone('+2638688003099');
+          expect(isValid, true);
+        });
+      });
+
+      group('263 VOIP Numbers', () {
+        test('2638644 -> Africom VoIP Number', () {
+          final isValid = LocalRegex.isAfricom('2638644105500');
+          expect(isValid, true);
+        });
+
+        test('2638612 -> Dandemutande VoIP Number', () {
+          final isValid = LocalRegex.isDandemutande('08612 003 000');
+          expect(isValid, true);
+        });
+
+        test('2638677 -> Liquid VoIP Number', () {
+          final isValid = LocalRegex.isLiquid('2638677020251');
+          expect(isValid, true);
+        });
+
+        test('2638611 -> Powertel VoIP Number', () {
+          final isValid = LocalRegex.isPowertel('2638611208281');
+          expect(isValid, true);
+        });
+
+        test('2638683 -> Telco VoIP Number', () {
+          final isValid = LocalRegex.isTelco('2638683000000');
+          expect(isValid, true);
+        });
+
+        test('2638622 -> Zarnet VoIP Number', () {
+          final isValid = LocalRegex.isZarnet('2638622009070');
+          expect(isValid, true);
+        });
+
+        test('2638688 -> Telone VoIP Number', () {
+          final isValid = LocalRegex.isTelone('2638688003099');
+          expect(isValid, true);
+        });
+      });
+
+      group('086 VoIP Numbers', () {
+        test('08644 -> Africom VoIP Numbers', () {
+          final isValid = LocalRegex.isAfricom('08644105500');
+          expect(isValid, true);
+        });
+
+        test('08612 -> Dandemutande VoIP Numbers', () {
+          final isValid = LocalRegex.isDandemutande('08612 003 000');
+          expect(isValid, true);
+        });
+
+        test('08677 -> Liquid VoIP Numbers', () {
+          final isValid = LocalRegex.isLiquid('08677020251');
+          expect(isValid, true);
+        });
+
+        test('08611 -> Powertel VoIP Numbers', () {
+          final isValid = LocalRegex.isPowertel('08611208281');
+          expect(isValid, true);
+        });
+
+        test('08683 -> Telco VoIP Numbers', () {
+          final isValid = LocalRegex.isTelco('08683000000');
+          expect(isValid, true);
+        });
+
+        test('08622 -> Zarnet VoIP Numbers', () {
+          final isValid = LocalRegex.isZarnet('08622009070');
+          expect(isValid, true);
+        });
+
+        test('08688 -> Telone VoIP Numbers', () {
+          final isValid = LocalRegex.isTelone('08688003099');
+          expect(isValid, true);
+        });
+      });
+    });
+
+    group('URLS', () {
+      test('Valid Url', () {
+        final isValid = LocalRegex.isUrl('https://www.google.com');
+        expect(isValid, true);
+      });
+
+      test('Invalid Url', () {
+        final isValid = LocalRegex.isUrl('www.helloworld');
+        expect(isValid, false);
+      });
+    });
+
+    group('Dates', () {
+      test('With /', () {
+        final isValid = LocalRegex.isDate('2022/07/28');
+        expect(isValid, true);
+      });
+
+      test('With -', () {
+        final isValid = LocalRegex.isDate('2022-07-28');
+        expect(isValid, true);
       });
     });
   });
