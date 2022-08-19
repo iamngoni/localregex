@@ -122,12 +122,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "mocktail",
-      "rootUri": "file:///home/iamngoni/dev-tools/flutter_sdk/.pub-cache/hosted/pub.dartlang.org/mocktail-0.3.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "node_preamble",
       "rootUri": "file:///home/iamngoni/dev-tools/flutter_sdk/.pub-cache/hosted/pub.dartlang.org/node_preamble-2.0.1",
       "packageUri": "lib/",
@@ -290,7 +284,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2022-08-19T18:15:57.103809Z",
+  "generated": "2022-08-19T20:24:20.195708Z",
   "generator": "pub",
   "generatorVersion": "2.17.6"
 }
