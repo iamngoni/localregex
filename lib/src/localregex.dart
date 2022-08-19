@@ -5,13 +5,14 @@ import 'package:localregex/src/utils.dart';
 /// {@endtemplate}
 class LocalRegex {
   static final RegExp _emailAddress = RegExp(
-      r"^[a-zA-Z0-9.a-zA-Z0-9!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+(.[a-zA-Z]+)*");
+    r"^[a-zA-Z0-9.a-zA-Z0-9!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+(.[a-zA-Z]+)*",
+  );
 
-  static RegExp _econet = RegExp(r"(?:\+?263|0)(77|78)\d{7}$");
+  static final RegExp _econet = RegExp(r'(?:\+?263|0)(77|78)\d{7}$');
 
-  static RegExp _netone = RegExp(r"(?:\+?263|0)(71)\d{7}$");
+  static final RegExp _netone = RegExp(r'(?:\+?263|0)(71)\d{7}$');
 
-  static RegExp _telecel = RegExp(r"(?:\+?263|0)(73)\d{7}$");
+  static final RegExp _telecel = RegExp(r'(?:\+?263|0)(73)\d{7}$');
 
   /// isEmail
   ///
