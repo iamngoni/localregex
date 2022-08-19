@@ -21,7 +21,7 @@ This plugin works for all Flutter supported platforms i.e. Android, iOS, Web and
 ### Add dependency
 ```yaml
 dependencies:
-  localregex: ^3.0.4
+  localregex: <version>
 ```
 
 ### Or
