@@ -1,4 +1,4 @@
-// Copyright (c) 2022, ModestNerd
+// Copyright (c) 2022, ModestNerd Developers
 // https://modestnerd.co
 //
 // Use of this source code is governed by an MIT-style

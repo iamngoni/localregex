@@ -46,7 +46,7 @@ LocalRegex.isTelecel('mobile_number');
 
 ### Check if a mobile number matches any of the patterns for Econet, Netone or Telecel
 ```dart
-LocalRegex.isValidZimMobile('mobile_number');
+LocalRegex.isZimMobile('mobile_number');
 ```
 
 ### Check if mobile number is valid (recommended for numbers not from Zimbabwe)
@@ -61,22 +61,22 @@ LocalRegex.isEmail('email_address');
 
 ### Check if a supplied national id matches the pattern for Zimbabwean national id
 ```dart
-LocalRegex.isValidZimID('national_id');
+LocalRegex.isZimID('national_id');
 ```
 
 ### Check passport number
 ```dart
-LocalRegex.isValidZimPassport('passport_number');
+LocalRegex.isZimPassport('passport_number');
 ```
 
 ### Check number plate
 ```dart
-LocalRegex.isValidZimVehicleNumberPlate('number_plate');
+LocalRegex.isZimNumberPlate('number_plate');
 ```
 
 ### Check driver's license
 ```dart
-LocalRegex.isValidZimDriversLicence('drivers_license');
+LocalRegex.isZimDriversLicence('drivers_license');
 ```
 
 ### Check URL
@@ -86,167 +86,29 @@ LocalRegex.isUrl("https://www.google.com");
 
 ### Check mobile number and returns mobile number in required format (for use with Zim numbers only)
 ``` dart
-String? number = LocalRegex.formatNumber(
-  value: '+263777213388',
-  type: FormatTypes.regular,
-);
+String? number = '+263777213388'.formatNumber(FormatType.regular);
 ```
 
 ### Check if password is valid (minimum of 8 characters, at least 1 special character, 1 capital letter, 1 numeric character)
 ```dart
-LocalRegex.isValidPassword('your_password');
+LocalRegex.isPassword('your_password');
 ```
 
 ## Mobile Number Format Types
 ### Regular
 > This is the general format of mobile numbers e.g. 0777213388
 ``` dart
-FormatTypes.regular
+FormatType.regular
 ```
 
-### Common
+### Country Code
 > This is the mobile number format with country code but no + sign e.g. 263777213388
 ``` dart
-FormatTypes.common
+FormatType.countryCode
 ```
 
-### Common Plus
+### Country Code Plus
 > This is the mobile number format with country code and + sign e.g. +263777213388
 ``` dart
-FormatTypes.commonPlus
+FormatType.countryCodePlus
 ```
-
-## PasswordTextFormField
-
-This a custom text form field that validates the password. It is recommended to use this field instead of the default text form field. It has the option to show which requirements have been met and which have not. The default password validation section can also be overwritten by supplying a function that returns a Widget.
-
-### Usage:
-
-```dart
-PasswordTextFormField(
-  controller: passwordController,
-  overrideValidationRow: true,
-  customValidationSection: customValidationSection,
-  decoration: InputDecoration(
-    border: InputBorder.none,
-  ),
-  autovalidateMode: AutovalidateMode.onUserInteraction,
-  showValidationRow: true,
-)
-```
-
-### Override Custom Validation Section
-Supply a function that returns a Widget that will be displayed in the validation section.
-
-#### Structure Of The Function
-```dart
-Widget customValidationSection({
-  required bool hasEightCharacters,
-  required bool hasCapitalLetter,
-  required bool hasSmallCapsLetter,
-  required bool hasADigit,
-  required bool hasASpecialCharacter,
-}) {
-  return Container(
-    height: 50,
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        Row(
-          children: [
-            Text(
-              "🔠",
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
-            Text(
-              hasCapitalLetter ? "✅" : "❌",
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
-          ],
-        ),
-        Row(
-          children: [
-            Text(
-              "🔡",
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
-            Text(
-              hasSmallCapsLetter ? "✅" : "❌",
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
-          ],
-        ),
-        Row(
-          children: [
-            Text(
-              "🔢",
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
-            Text(
-              hasADigit ? "✅" : "❌",
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
-          ],
-        ),
-        Row(
-          children: [
-            Text(
-              "🔣",
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
-            Text(
-              hasASpecialCharacter ? "✅" : "❌",
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
-          ],
-        ),
-        Row(
-          children: [
-            Text(
-              "8️⃣ chars",
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
-            Text(
-              hasCapitalLetter ? "✅" : "❌",
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
-          ],
-        ),
-      ],
-    ),
-  );
-}
-```
-
-## Screenshot
-<table>
-   <tr>
-      <td> Default</td>
-      <td> Using The Override Option</td>
-   </tr>
-   <tr>
-      <td><img src="https://res.cloudinary.com/iamngoni/image/upload/v1641903927/default_bivxyk.png"/></td>
-      <td><img src="https://res.cloudinary.com/iamngoni/image/upload/v1641903839/override_eh09yg.png"/></td>
-   </tr>
-</table>
-
