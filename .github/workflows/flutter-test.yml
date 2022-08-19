@@ -2,9 +2,6 @@ name: Local Regex Test
 # This workflow is triggered on pushes to the repository.
 on:
   push:
-    branches:
-      - master
-# on: push    # Default will running for every branch.
 
 jobs:
   build:
@@ -19,7 +16,7 @@ jobs:
       # Setup the flutter environment.
       - uses: subosito/flutter-action@v1
         with:
-          flutter-version: "2.10.1"
+          flutter-version: "3.0.5"
 
       # Get flutter dependencies.
       - run: flutter pub get

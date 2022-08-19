@@ -1,3 +1,12 @@
+## 4.0.0
+* This version brings **breaking changes** which need to be carefully looked into.
+* Most of the method names have been changed
+* Usage of MIT License
+* Format Number is now a String extension
+* Removed PasswordTextFormField widget
+* FormatTypes -> FormatType (enum)
+
+
 ## 3.0.5
 * Dates regex
 Matches YYYY-MM-DD or YYYY/MM/DD for now
