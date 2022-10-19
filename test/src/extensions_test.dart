@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:localregex/src/extensions.dart';
 import 'package:localregex/src/format_type.dart';
 import 'package:test/test.dart';
