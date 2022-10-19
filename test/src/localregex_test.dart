@@ -174,6 +174,16 @@ void main() {
           final isValid = LocalRegex.isZimID('75-5112188 K44');
           expect(isValid, true);
         });
+
+        test('With no spaces at all', () {
+          final isValid = LocalRegex.isZimID('75511218K44');
+          expect(isValid, true);
+        });
+
+        test('With 7 characters and no spaces at all', () {
+          final isValid = LocalRegex.isZimID('755112188K44');
+          expect(isValid, true);
+        });
       });
     });
 
