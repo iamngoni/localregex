@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:localregex/src/extensions.dart';
 import 'package:localregex/src/format_type.dart';
 import 'package:test/test.dart';
@@ -24,5 +26,20 @@ void main() {
   test('Clean String', () {
     final cleanString = '  77213388  '.clean;
     expect(cleanString, '77213388');
+  });
+
+  test('Format National ID', () {
+    final id = '75511218 K44'.formatID();
+    expect(id, '75-511218 K 44');
+  });
+
+  test('Format National ID', () {
+    final id = '75-511218 K44'.formatID();
+    expect(id, '75-511218 K 44');
+  });
+
+  test('Format National ID', () {
+    final id = '75511218K44'.formatID();
+    expect(id, '75-511218 K 44');
   });
 }

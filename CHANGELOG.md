@@ -1,6 +1,7 @@
 ## 4.0.1
 
 - More national identity number tests
+- New extension to allow formatting of a string to proper national identity number structure
 
 ## 4.0.0
 
