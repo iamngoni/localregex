@@ -7,4 +7,8 @@
 
 library localregex;
 
+export 'src/extensions.dart';
+export 'src/format_type.dart';
 export 'src/localregex.dart';
+export 'src/localregex_exception.dart';
+export 'src/utils.dart';
