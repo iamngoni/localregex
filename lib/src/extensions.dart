@@ -5,6 +5,7 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
+import 'package:localregex/localregex.dart';
 import 'package:localregex/src/format_type.dart';
 import 'package:localregex/src/localregex.dart';
 import 'package:localregex/src/localregex_exception.dart';
@@ -33,14 +34,14 @@ extension RegexExtensionForNumbers on String {
   ///
   /// Returns string in the requested format.
   /// @throws [LocalRegexException] if the mobile number is invalid.
-  String? formatNumber(FormatType type) {
+  String? formatNumber({required FormatType formatType}) {
     String? number;
     if (LocalRegex.isZimMobile(this) || LocalRegex.isZimVoip(this)) {
-      if (type == FormatType.countryCode) {
+      if (formatType == FormatType.countryCode) {
         number = countryCodeFormat(this);
-      } else if (type == FormatType.countryCodePlus) {
+      } else if (formatType == FormatType.countryCodePlus) {
         number = countryCodePlusFormat(this);
-      } else if (type == FormatType.regular) {
+      } else if (formatType == FormatType.regular) {
         number = regularFormat(this);
       }
     } else {
@@ -59,7 +60,7 @@ extension RegexExtensionForID on String {
   ///
   /// Returns string in the requested format.
   /// @throws [LocalRegexException] if the national id is invalid.
-  String? formatID() {
+  String? formatID({IdFormatType formatType = IdFormatType.proper}) {
     late String id;
     if (LocalRegex.isZimID(this)) {
       final idWithNoSpaces = clean.replaceAll(RegExp('[^A-Z0-9]'), '');
@@ -71,7 +72,15 @@ extension RegexExtensionForID on String {
           .replaceAll(idPrefix, '')
           .replaceAll(idSuffix, '')
           .trim();
-      id = '$idPrefix-$idBody $properIdSuffix';
+
+      switch (formatType) {
+        case IdFormatType.proper:
+          id = '$idPrefix-$idBody $properIdSuffix';
+          break;
+        case IdFormatType.noSpace:
+          id = '$idPrefix$idBody$properIdSuffix';
+          break;
+      }
     } else {
       throw LocalRegexException('National ID is not valid');
     }

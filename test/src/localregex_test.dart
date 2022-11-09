@@ -1,7 +1,4 @@
-// ignore_for_file: prefer_const_constructors
 import 'package:localregex/localregex.dart';
-import 'package:localregex/src/extensions.dart';
-import 'package:localregex/src/format_type.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -116,18 +113,20 @@ void main() {
 
       group('Formatting Mobile Numbers', () {
         test('countryCode Format (263)', () {
-          final number = '0777213388'.formatNumber(FormatType.countryCode);
+          final number =
+              '0777213388'.formatNumber(formatType: FormatType.countryCode);
           expect(number, '263777213388');
         });
 
         test('countryCodePlus Format (+263)', () {
-          final number =
-              '263777213388'.formatNumber(FormatType.countryCodePlus);
+          final number = '263777213388'
+              .formatNumber(formatType: FormatType.countryCodePlus);
           expect(number, '+263777213388');
         });
 
         test('regular Format (07)', () {
-          final number = '+263777213388'.formatNumber(FormatType.regular);
+          final number =
+              '+263777213388'.formatNumber(formatType: FormatType.regular);
           expect(number, '0777213388');
         });
       });

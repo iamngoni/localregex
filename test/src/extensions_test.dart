@@ -5,18 +5,20 @@ import 'package:test/test.dart';
 void main() {
   group('Extensions Test', () {
     test('countryCode', () {
-      final mobileNumber = '0777213388'.formatNumber(FormatType.countryCode);
+      final mobileNumber =
+          '0777213388'.formatNumber(formatType: FormatType.countryCode);
       expect(mobileNumber, '263777213388');
     });
 
     test('countryCodePlus', () {
       final mobileNumber =
-          '0777213388'.formatNumber(FormatType.countryCodePlus);
+          '0777213388'.formatNumber(formatType: FormatType.countryCodePlus);
       expect(mobileNumber, '+263777213388');
     });
 
     test('regular', () {
-      final mobileNumber = '+263777213388'.formatNumber(FormatType.regular);
+      final mobileNumber =
+          '+263777213388'.formatNumber(formatType: FormatType.regular);
       expect(mobileNumber, '0777213388');
     });
   });
