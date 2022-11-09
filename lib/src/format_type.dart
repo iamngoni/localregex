@@ -5,26 +5,28 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
-/// FormatType
+/// Enum class for format type. This is meant to allow devs to pick
+/// the phone number format that they want and is specific to their needs.
+///
+/// Usage:
+/// ```dart
+/// FormatType.countryCode
+/// FormatType.countryCodePlus
+/// FormatType.regular
+/// ```
 enum FormatType {
-  /// countryCode
+  /// **countryCode**
   ///
   /// The country code of the number using 263 format.
-  countryCode('263'),
+  countryCode,
 
-  /// countryCodePlus
+  /// **countryCodePlus**
   ///
   /// The country code of the number using +263 format.
-  countryCodePlus('+263'),
+  countryCodePlus,
 
-  /// regular
+  /// **regular**
   ///
   /// The number using 07 format.
-  regular('07');
-
-  /// FormatType
-  const FormatType(this.type);
-
-  /// type
-  final String type;
+  regular;
 }

@@ -1,5 +1,4 @@
-import 'package:localregex/src/extensions.dart';
-import 'package:localregex/src/format_type.dart';
+import 'package:localregex/localregex.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -41,5 +40,20 @@ void main() {
   test('Format National ID', () {
     final id = '75511218K44'.formatID();
     expect(id, '75-511218 K 44');
+  });
+
+  test('Format National ID (No Space)', () {
+    final id = '75511218 K44'.formatID(formatType: IdFormatType.noSpace);
+    expect(id, '75511218K44');
+  });
+
+  test('Format National ID (No Space v2)', () {
+    final id = '75-511218 K44'.formatID(formatType: IdFormatType.noSpace);
+    expect(id, '75511218K44');
+  });
+
+  test('Format National ID (No Space v3)', () {
+    final id = '75511218K44'.formatID(formatType: IdFormatType.noSpace);
+    expect(id, '75511218K44');
   });
 }

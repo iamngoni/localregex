@@ -1,1 +1,13 @@
-include: package:very_good_analysis/analysis_options.3.0.1.yaml
+include: package:very_good_analysis/analysis_options.3.1.0.yaml
+linter:
+  rules:
+    always_declare_return_types: true
+    always_specify_types: false
+    always_use_package_imports: false
+    avoid_dynamic_calls: true
+    avoid_relative_lib_imports: false
+    avoid_type_to_string: true
+    omit_local_variable_types: false
+    prefer_single_quotes: false
+    prefer_relative_imports: true
+    public_member_api_docs: false

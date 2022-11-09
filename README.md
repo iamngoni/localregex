@@ -99,7 +99,7 @@ LocalRegex.isUrl("https://www.google.com");
 ### Check mobile number and returns mobile number in required format (for use with Zim numbers only)
 
 ```dart
-String? number = '+263777213388'.formatNumber(FormatType.regular);
+String? number = '+263777213388'.formatNumber(formatType: FormatType.regular);
 ```
 
 ### Check if password is valid (minimum of 8 characters, at least 1 special character, 1 capital letter, 1 numeric character)
@@ -139,5 +139,5 @@ FormatType.countryCodePlus
 Here the output format to be used is 11-223344 K 55 as found on most national identity documents in Zimbabwe
 
 ```dart
-'11223344K55'.formatID(); // > 11-223344 K 55
+'11223344K55'.formatID(formatType: IdFormatType.proper); // > 11-223344 K 55
 ```

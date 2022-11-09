@@ -1,3 +1,8 @@
+## 4.0.1+2
+
+- format IDs with 2 new formatting types.
+- **breaking update**: format type on phone numbers is now a named parameter.
+
 ## 4.0.1+1
 
 - fix imports
