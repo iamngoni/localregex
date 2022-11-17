@@ -30,22 +30,54 @@ extension RegexExtensionForNumbers on String {
   ///
   /// Returns string in the requested format.
   /// @throws [LocalRegexException] if the mobile number is invalid.
-  String? formatNumber({required FormatType formatType}) {
+  ///
+  /// [cleanNumber]
+  ///
+  /// some phones autoformat contacts
+  /// if true: strip all non digit chars from a mobile number
+  ///
+  /// e.g (077) 612-3098 -> 0776123098
+
+  String? formatNumber({
+    required FormatType formatType,
+    bool cleanNumber = true,
+  }) {
     String? number;
-    if (LocalRegex.isZimMobile(this) || LocalRegex.isZimVoip(this)) {
-      if (formatType == FormatType.countryCode) {
-        number = countryCodeFormat(this);
-      } else if (formatType == FormatType.countryCodePlus) {
-        number = countryCodePlusFormat(this);
-      } else if (formatType == FormatType.regular) {
-        number = regularFormat(this);
+    final currentNumber = cleanNumber ? this.cleanNumber : this;
+
+    if (LocalRegex.isZimMobile(currentNumber) ||
+        LocalRegex.isZimVoip(currentNumber)) {
+      switch (formatType) {
+        case FormatType.countryCode:
+          number = countryCodeFormat(currentNumber);
+          break;
+        case FormatType.countryCodePlus:
+          number = countryCodePlusFormat(currentNumber);
+          break;
+        case FormatType.regular:
+          number = regularFormat(currentNumber);
+          break;
       }
-    } else {
+    }
+
+    // failed to format, invalid
+    else {
       throw LocalRegexException("Mobile number is not valid");
     }
 
     return number;
   }
+
+  /// {@template clean_number}
+  /// clean number
+  ///
+  /// some phones autoformat contacts,
+  ///
+  /// this strips all non digit chars from a mobile number
+  ///
+  /// e.g (077) 612-3098 -> 0776123098
+  /// {@endtemplate}
+  String get cleanNumber => replaceAll(RegExp(r'(\D)*'), "");
 }
 
 /// RegexExtensionForID
