@@ -30,6 +30,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "kudak3",
+      "name": "Kudakwashe Kuzvindiwana",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52527906?v=4",
+      "profile": "https://github.com/kudak3",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "commitConvention": "angular"
