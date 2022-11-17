@@ -141,3 +141,14 @@ Here the output format to be used is 11-223344 K 55 as found on most national id
 ```dart
 '11223344K55'.formatID(formatType: IdFormatType.proper); // > 11-223344 K 55
 ```
+
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
