@@ -21,5 +21,16 @@
   },
   "linkToUsage": true,
   "skipCi": true,
-  "contributors": []
+  "contributors": [
+    {
+      "login": "iamngoni",
+      "name": "Ngonidzashe Mangudya",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38191932?v=4",
+      "profile": "http://www.iamngoni.co.zw",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "commitConvention": "angular"
 }
