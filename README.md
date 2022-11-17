@@ -147,6 +147,23 @@ Here the output format to be used is 11-223344 K 55 as found on most national id
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center"><a href="http://www.iamngoni.co.zw"><img src="https://avatars.githubusercontent.com/u/38191932?v=4" width="100px;" alt=""/><br /><sub><b>Ngonidzashe Mangudya</b></sub></a></td>
+      <td align="center"><a href="https://github.com/kudak3"><img src="https://avatars.githubusercontent.com/u/52527906?v=4" width="100px;" alt=""/><br /><sub><b>Kudakwashe Kuzvindiwana</b></sub></a></td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td align="center" size="13px" colspan="7">
+        <img src="https://raw.githubusercontent.com/all-contributors/all-contributors-cli/1b8533af435da9854653492b1327a23a4dbd0a10/assets/logo-small.svg">
+          <a href="https://all-contributors.js.org/docs/en/bot/usage">Add your contributions</a>
+        </img>
+      </td>
+    </tr>
+  </tfoot>
+</table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
