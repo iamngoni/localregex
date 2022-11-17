@@ -152,6 +152,7 @@ Here the output format to be used is 11-223344 K 55 as found on most national id
     <tr>
       <td align="center"><a href="http://www.iamngoni.co.zw"><img src="https://avatars.githubusercontent.com/u/38191932?v=4" width="100px;" alt=""/><br /><sub><b>Ngonidzashe Mangudya</b></sub></a></td>
       <td align="center"><a href="https://github.com/kudak3"><img src="https://avatars.githubusercontent.com/u/52527906?v=4" width="100px;" alt=""/><br /><sub><b>Kudakwashe Kuzvindiwana</b></sub></a></td>
+      <td align="center"><a href="https://donnc.github.io/"><img src="https://avatars.githubusercontent.com/u/47761288?v=4" width="100px;" alt=""/><br /><sub><b>Donald Chinhuru</b></sub></a></td>
     </tr>
   </tbody>
   <tfoot>
