@@ -1,3 +1,16 @@
+## 4.0.1+4
+
+- added additional parameter to `formatNumber` extension, you can now optionally choose to clean
+phone number if its formatted (defaults to `true`).
+```dart
+
+final p = '(077) 612-3098'.formatNumber(formatType: FormatType.countryCode, cleanNumber: true)
+
+// result
+// (077) 612-3098 -> 0776123098
+```
+- minor changes  
+
 ## 4.0.1+3
 
 - **fix** update sdk dependency version
