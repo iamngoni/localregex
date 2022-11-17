@@ -39,6 +39,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "DonnC",
+      "name": "Donald Chinhuru",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47761288?v=4",
+      "profile": "https://donnc.github.io/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "commitConvention": "angular"
