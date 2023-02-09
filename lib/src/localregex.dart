@@ -20,6 +20,10 @@ class LocalRegex {
   static final RegExp _netone = RegExp(r'(?:\+?263|0)(71)\d{7}$');
   static final RegExp _telecel = RegExp(r'(?:\+?263|0)(73)\d{7}$');
 
+  // Zim landline (Telone at the time of writing)
+  static final RegExp _landLine = RegExp(
+      r'(?:\+?263|0)(242|24213|24215|24214|242150|2421|27203|272317|27205|272046|27204|2020|2021|2024|20200|26209|26208|262098|25206|252055|25207|25205|66210|66219|66218|66212|66216|66217|662137|672192|672198|672196|672136|6721|67215|67214|61214|61215|612141|612140|6821|68215|682189|68216|6821|652080|6523|65208|6521|65213|392|39234|392380|392366|392360|39230|39245|392323|39235|392308|31231|31233|312337|312370|292|292861|292821|292803|292802|292800|292804|292807|292809|8128|812847|812835|8128|812875|812856|8328|8523|89280|842801|842835|8428|842808|542|54252|542532|542548|54212|5525|55259|552558|552557)\d{3,7}$');
+
   // Identity Verification
   static final RegExp _nationalId =
       RegExp(r'^(\d{2})(-|\s*)(\d{6,7})(\s)*([A-Z]{1})(\s)*(\d{2})$');
@@ -79,6 +83,12 @@ class LocalRegex {
   /// Checks if given number is a valid Zim Mobile number.
   static bool isZimMobile(String value) =>
       isEconet(value) || isNetone(value) || isTelecel(value);
+
+  /// isZimLandline
+  ///
+  /// Checks if given number is a valid Zimbabwean landline number registered
+  /// under telone as it is currently the only landline provider
+  static bool isZimLandline(String value) => isValid(value, _landLine);
 
   /// isAfricom
   ///
