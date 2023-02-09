@@ -19,4 +19,9 @@ class LocalRegexException implements Exception {
   ///
   /// The message of the exception.
   final String message;
+
+  @override
+  String toString() {
+    return "LocalRegexException: $message";
+  }
 }
