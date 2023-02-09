@@ -326,6 +326,35 @@ void main() {
       });
     });
 
+    group('Landline Numbers', () {
+      group('+263 Landline Numbers', () {
+        test('+263 -> Landline Number', () {
+          final isValid = LocalRegex.isZimLandline('+263242790122');
+          expect(isValid, true);
+          final isNotValid = LocalRegex.isZimLandline('+2632427x0122');
+          expect(isNotValid, false);
+        });
+
+        test('263 -> Landline Number', () {
+          final isValid = LocalRegex.isZimLandline('263242790122');
+          expect(isValid, true);
+           final isNotValid = LocalRegex.isZimLandline('26324%2790122');
+          expect(isNotValid, false);
+
+        });
+        test('0x -> Landline Number', () {
+          final isValid = LocalRegex.isZimLandline('0242790122');
+          expect(isValid, true);
+          // O vs 0
+          final isNotValid = LocalRegex.isZimLandline('O242790122'); 
+          expect(isNotValid, false);
+           // I vs 1
+          final isFalse = LocalRegex.isZimLandline('O242790I22'); 
+          expect(isFalse, false);
+        });
+      });
+    });
+
     group('URLS', () {
       test('Valid Url', () {
         final isValid = LocalRegex.isUrl('https://www.google.com');

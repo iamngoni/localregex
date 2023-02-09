@@ -7,18 +7,27 @@ void main() {
       final mobileNumber =
           '0777213388'.formatNumber(formatType: FormatType.countryCode);
       expect(mobileNumber, '263777213388');
+      final landLineNumber =
+          '0242790122'.formatNumber(formatType: FormatType.countryCode);
+      expect(landLineNumber, '263242790122');
     });
 
     test('countryCodePlus', () {
       final mobileNumber =
           '0777213388'.formatNumber(formatType: FormatType.countryCodePlus);
       expect(mobileNumber, '+263777213388');
+      final landLineNumber =
+          '0242790122'.formatNumber(formatType: FormatType.countryCodePlus);
+      expect(landLineNumber, '+263242790122');
     });
 
     test('regular', () {
       final mobileNumber =
           '+263777213388'.formatNumber(formatType: FormatType.regular);
       expect(mobileNumber, '0777213388');
+      final landLineNumber =
+          '+263242790122'.formatNumber(formatType: FormatType.regular);
+      expect(landLineNumber, '0242790122');
     });
   });
 
