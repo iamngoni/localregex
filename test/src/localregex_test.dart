@@ -326,6 +326,51 @@ void main() {
       });
     });
 
+    group('Landline Numbers', () {
+      group('+263 Landline Numbers', () {
+        test('+263 -> Valid Landline Number', () {
+          final isValid = LocalRegex.isZimLandline('+263242790122');
+          expect(isValid, true);
+        });
+
+        test('+263 -> InValid Landline Number', () {
+          final isNotValid = LocalRegex.isZimLandline('+2632427x0122');
+          expect(isNotValid, false);
+        });
+      });
+      group('263 Landline Numbers', () {
+        test('263 -> Valid Landline Number', () {
+          final isValid = LocalRegex.isZimLandline('263242790122');
+          expect(isValid, true);
+        });
+
+        test('263 -> InValid Landline Number', () {
+          final isNotValid = LocalRegex.isZimLandline('26324%2790122');
+          expect(isNotValid, false);
+        });
+      });
+      group('Oxx Landline Numbers', () {
+        test('0x -> Valid Landline Number', () {
+          final isValid = LocalRegex.isZimLandline('0242790122');
+          expect(isValid, true);
+        });
+        test('0x -> InValid Landline Number', () {
+          // O vs 0
+          final isNotValid = LocalRegex.isZimLandline('O242790122');
+          expect(isNotValid, false);
+          // I vs 1
+          final isFalse = LocalRegex.isZimLandline('O242790I22');
+          expect(isFalse, false);
+          // too long to be a valid number
+          final tooLong = LocalRegex.isZimLandline('O2427901228');
+          expect(tooLong, false);
+          // too short to be a valid number
+          final tooShort = LocalRegex.isZimLandline('O242790');
+          expect(tooShort, false);
+        });
+      });
+    });
+
     group('URLS', () {
       test('Valid Url', () {
         final isValid = LocalRegex.isUrl('https://www.google.com');

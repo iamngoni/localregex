@@ -29,38 +29,38 @@ bool isValid(String value, RegExp source) {
 
 /// countryCodeFormat
 ///
-/// Returns the mobile number with country code format 263.
+/// Returns the phone number with country code format 263.
 /// @throws [LocalRegexException] if the given [number] is not a valid number.
 String countryCodeFormat(String number) {
   if (number.length < 9) {
-    throw LocalRegexException('Mobile number length cannot be less than 9');
+    throw LocalRegexException('Phone number length cannot be less than 9');
   }
-  final mobileNumber = number.substring(number.length - 9);
-  return '263${mobileNumber.clean}';
+  final phoneNumber = number.substring(number.length - 9);
+  return '263${phoneNumber.clean}';
 }
 
 /// countryCodePlusFormat
 ///
-/// Returns the mobile number with country code format +263.
+/// Returns the phone number with country code format +263.
 /// @throws [LocalRegexException] if the given [number] is not a valid number.
 String countryCodePlusFormat(String number) {
   if (number.length < 9) {
-    throw LocalRegexException('Mobile number length cannot be less than 9');
+    throw LocalRegexException('Phone number length cannot be less than 9');
   }
 
-  final mobileNumber = number.substring(number.length - 9);
-  return '+263${mobileNumber.clean}';
+  final phoneNumber = number.substring(number.length - 9);
+  return '+263${phoneNumber.clean}';
 }
 
 /// regularFormat
 ///
-/// Returns the mobile number with regular format 07.
+/// Returns the phone number with regular format 07.
 /// @throws [LocalRegexException] if the given [number] is not a valid number.
 String regularFormat(String number) {
   if (number.length < 9) {
-    throw LocalRegexException('Mobile number length cannot be less than 9');
+    throw LocalRegexException('Phone number length cannot be less than 9');
   }
 
-  final mobileNumber = number.substring(number.length - 9);
-  return '0${mobileNumber.clean}';
+  final phoneNumber = number.substring(number.length - 9);
+  return '0${phoneNumber.clean}';
 }

@@ -27,6 +27,6 @@ enum FormatType {
 
   /// **regular**
   ///
-  /// The number using 07 format.
+  /// The number using 07 or 0xx format .
   regular;
 }
