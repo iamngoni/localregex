@@ -45,8 +45,6 @@ extension RegexExtensionForNumbers on String {
   }) {
     String? number;
     final currentNumber = cleanNumber ? this.cleanNumber : this;
-    print("============");
-    print(currentNumber);
 
     if (LocalRegex.isZimMobile(currentNumber) ||
         LocalRegex.isZimVoip(currentNumber) ||
