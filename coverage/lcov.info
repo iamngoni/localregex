@@ -12,7 +12,7 @@ DA:56,1
 DA:57,1
 DA:59,1
 DA:60,1
-DA:67,0
+DA:67,1
 DA:82,3
 DA:93,1
 DA:95,1
@@ -29,7 +29,7 @@ DA:110,1
 DA:111,2
 DA:115,0
 LF:29
-LH:27
+LH:28
 end_of_record
 SF:lib/src/localregex.dart
 DA:14,3
@@ -88,11 +88,11 @@ LF:52
 LH:50
 end_of_record
 SF:lib/src/localregex_exception.dart
-DA:16,0
+DA:16,1
 DA:23,0
 DA:25,0
 LF:3
-LH:0
+LH:1
 end_of_record
 SF:lib/src/utils.dart
 DA:14,1

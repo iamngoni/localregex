@@ -64,7 +64,7 @@ extension RegexExtensionForNumbers on String {
 
     // failed to format, invalid
     else {
-      throw LocalRegexException('Phone number is not valid');
+      throw LocalRegexException('Phone number is not valid!');
     }
 
     return number;
