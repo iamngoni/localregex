@@ -22,6 +22,6 @@ class LocalRegexException implements Exception {
 
   @override
   String toString() {
-    return "LocalRegexException: $message";
+    return 'LocalRegexException: $message';
   }
 }
