@@ -1,7 +1,16 @@
+## 4.0.2
+
+- added functionality to check if landline number is valid
+
+```dart
+LocalRegex.isZimLandline('0242790122')
+```
+
 ## 4.0.1+4
 
 - added additional parameter to `formatNumber` extension, you can now optionally choose to clean
-phone number if its formatted (defaults to `true`).
+  phone number if its formatted (defaults to `true`).
+
 ```dart
 
 final p = '(077) 612-3098'.formatNumber(formatType: FormatType.countryCode, cleanNumber: true)
@@ -9,7 +18,8 @@ final p = '(077) 612-3098'.formatNumber(formatType: FormatType.countryCode, clea
 // result
 // (077) 612-3098 -> 0776123098
 ```
-- minor changes  
+
+- minor changes
 
 ## 4.0.1+3
 

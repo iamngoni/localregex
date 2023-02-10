@@ -15,7 +15,7 @@
 This plugin allows developers to check if an input matches common regex patterns in Zimbabwe and other countries.
 This plugin works for all Flutter supported platforms i.e. Android, iOS, Web and Desktop (Linux, Windows & MacOS).
 
-> Developed by Ngonidzashe Mangudya. Special shoutout to [Kudakwashe Kuzvindiwana](https://github.com/kudak3) for pushing this package the most.
+> Developed by Ngonidzashe Mangudya. Special shoutout to [Kudakwashe Kuzvindiwana](https://github.com/kudak3) & [Donald Chinhuru](https://twitter.com/donix_22) for pushing this package the most.
 
 ## Usage
 
@@ -60,6 +60,12 @@ LocalRegex.isZimMobile('mobile_number');
 LocalRegex.isValidMobile('mobile_number');
 ```
 
+### Check if Zimbabwean landline number is valid
+
+```dart
+LocalRegex.isZimLandline('landline_number');
+```
+
 ### Check if a supplied email matches proper email patterns
 
 ```dart
@@ -96,7 +102,7 @@ LocalRegex.isZimDriversLicence('drivers_license');
 LocalRegex.isUrl("https://www.google.com");
 ```
 
-### Check mobile number and returns mobile number in required format (for use with Zim numbers only)
+### Check phone number and returns phone number in required format (for use with Zim numbers only)
 
 ```dart
 String? number = '+263777213388'.formatNumber(formatType: FormatType.regular);
