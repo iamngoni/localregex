@@ -96,8 +96,8 @@ extension RegexExtensionForID on String {
       final idWithNoSpaces = clean.replaceAll(RegExp('[^A-Z0-9]'), '');
       final idPrefix = idWithNoSpaces.substring(0, 2);
       final idSuffix = idWithNoSpaces.lastCharacters(3);
-      final properIdSuffix =
-          "${idSuffix.split("")[0]} ${idSuffix.split("")[1]}${idSuffix.split("")[2]}";
+      final properIdSuffix = "${idSuffix.split("")[0]} ${idSuffix.split("")[1]}"
+          "${idSuffix.split("")[2]}";
       final idBody = idWithNoSpaces
           .replaceAll(idPrefix, '')
           .replaceAll(idSuffix, '')
@@ -108,7 +108,7 @@ extension RegexExtensionForID on String {
           id = '$idPrefix-$idBody $properIdSuffix';
           break;
         case IdFormatType.noSpace:
-          id = "$idPrefix$idBody$properIdSuffix".clean;
+          id = '$idPrefix$idBody$properIdSuffix'.clean;
           break;
       }
     } else {
