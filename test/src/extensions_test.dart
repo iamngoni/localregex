@@ -34,6 +34,9 @@ void main() {
   test('Clean String', () {
     final cleanString = '  77213388  '.clean;
     expect(cleanString, '77213388');
+    final landLineNumber =
+        '(024)2790122'.formatNumber(formatType: FormatType.countryCodePlus);
+    expect(landLineNumber, '+263242790122');
   });
 
   test('Format National ID', () {
