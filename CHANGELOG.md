@@ -1,3 +1,7 @@
+## 4.0.3
+
+- fix: allow lowercase values to be validated in ids
+
 ## 4.0.2
 
 - added functionality to check if landline number is valid
