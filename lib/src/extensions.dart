@@ -5,7 +5,7 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
-import '../localregex.dart';
+part of 'localregex.dart';
 
 /// RegexExtensionForStrings
 ///
@@ -99,8 +99,8 @@ extension RegexExtensionForID on String {
       final properIdSuffix = "${idSuffix.split("")[0]} ${idSuffix.split("")[1]}"
           "${idSuffix.split("")[2]}";
       final idBody = idWithNoSpaces
-          .replaceAll(idPrefix, '')
-          .replaceAll(idSuffix, '')
+          .replaceFirst(RegExp('[0-9]{2}'), '')
+          .replaceFirst(RegExp('[A-Za-z][0-9]{2}'), '')
           .trim();
 
       switch (formatType) {

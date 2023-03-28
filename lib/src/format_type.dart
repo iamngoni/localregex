@@ -5,6 +5,8 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
+part of 'localregex.dart';
+
 /// Enum class for format type. This is meant to allow devs to pick
 /// the phone number format that they want and is specific to their needs.
 ///

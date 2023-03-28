@@ -1,3 +1,7 @@
+## 4.0.4
+
+- fix: avoid duplication of ID characters when formatting
+
 ## 4.0.3
 
 - fix: allow lowercase values to be validated in ids
