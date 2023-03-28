@@ -5,10 +5,12 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
+import 'dart:developer';
+
 part 'extensions.dart';
 part 'format_type.dart';
-part 'localregex_exception.dart';
 part 'id_format_type.dart';
+part 'localregex_exception.dart';
 part 'utils.dart';
 
 /// LocalRegex

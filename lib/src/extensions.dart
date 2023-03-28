@@ -99,8 +99,8 @@ extension RegexExtensionForID on String {
       final properIdSuffix = "${idSuffix.split("")[0]} ${idSuffix.split("")[1]}"
           "${idSuffix.split("")[2]}";
       final idBody = idWithNoSpaces
-          .replaceAll(idPrefix, '')
-          .replaceAll(idSuffix, '')
+          .replaceFirst(RegExp('[0-9]{2}'), '')
+          .replaceFirst(RegExp('[A-Za-z][0-9]{2}'), '')
           .trim();
 
       switch (formatType) {
