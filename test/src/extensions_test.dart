@@ -65,7 +65,7 @@ void main() {
   });
 
   test('Format National ID (No Space v3)', () {
-    final id = '75511218K44'.formatID(formatType: IdFormatType.noSpace);
-    expect(id, '75511218K44');
+    final id = '12143471Z12'.formatID(formatType: IdFormatType.noSpace);
+    expect(id, '12143471Z12');
   });
 }

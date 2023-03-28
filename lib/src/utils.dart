@@ -5,8 +5,7 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
-import 'extensions.dart';
-import 'localregex_exception.dart';
+part of 'localregex.dart';
 
 /// isValid
 ///

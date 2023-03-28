@@ -5,6 +5,8 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
+part of 'localregex.dart';
+
 /// LocalRegexException
 ///
 /// This class is used to represent exceptions that occur during the usage of
