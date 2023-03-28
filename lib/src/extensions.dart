@@ -115,6 +115,6 @@ extension RegexExtensionForID on String {
       throw LocalRegexException('National ID is not valid');
     }
 
-    return id;
+    return id.toUpperCase();
   }
 }

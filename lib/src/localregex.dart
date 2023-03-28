@@ -27,7 +27,7 @@ class LocalRegex {
 
   // Identity Verification
   static final RegExp _nationalId =
-      RegExp(r'^(\d{2})(-|\s*)(\d{6,7})(\s)*([A-Z]{1})(\s)*(\d{2})$');
+      RegExp(r'^(\d{2})(-|\s*)(\d{6,7})(\s)*([A-Za-z]{1})(\s)*(\d{2})$');
   static final RegExp _numberPlate = RegExp(r'^[A-Z]{3}(-|\s*)\d{4}$');
   static final RegExp _passportNumber = RegExp(r'^[A-Z]{2}\d{6}$');
   static final RegExp _driversLicence = RegExp(r'\d{5}[a-zA-Z]{2}');
