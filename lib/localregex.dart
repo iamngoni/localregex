@@ -6,3 +6,5 @@
 // https://opensource.org/licenses/MIT.
 
 library localregex;
+
+export 'src/localregex.dart';
