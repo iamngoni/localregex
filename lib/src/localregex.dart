@@ -58,11 +58,6 @@ class LocalRegex {
   static final RegExp _telone = RegExp(r'(?:\+?263|0)(8688)\d{6}$');
   static final RegExp _zarnet = RegExp(r'(?:\+?263|0)(8622)\d{6}$');
 
-  // Dates
-  static final RegExp _date = RegExp(
-    r'^(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$',
-  );
-
   /// isEmail
   ///
   /// Checks if given email address is valid.
@@ -178,9 +173,4 @@ class LocalRegex {
   ///
   /// Checks if given string is a valid url.
   static bool isUrl(String value) => isValid(value, _url);
-
-  /// isDate
-  ///
-  /// Checks if given string is a valid date.
-  static bool isDate(String value) => isValid(value, _date);
 }

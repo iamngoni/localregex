@@ -382,17 +382,5 @@ void main() {
         expect(isValid, false);
       });
     });
-
-    group('Dates', () {
-      test('With /', () {
-        final isValid = LocalRegex.isDate('2022/07/28');
-        expect(isValid, true);
-      });
-
-      test('With -', () {
-        final isValid = LocalRegex.isDate('2022-07-28');
-        expect(isValid, true);
-      });
-    });
   });
 }

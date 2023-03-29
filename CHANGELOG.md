@@ -1,3 +1,7 @@
+## 4.0.5
+
+- removed isDate method
+
 ## 4.0.4
 
 - fix: avoid duplication of ID characters when formatting
