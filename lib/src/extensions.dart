@@ -118,3 +118,14 @@ extension RegexExtensionForID on String {
     return id.toUpperCase();
   }
 }
+
+extension StudentIDRegexExtension on LocalSchools {
+  static final Map<void, RegExp> _schools = {
+    LocalSchools.hit: LocalRegex._schoolHit,
+    LocalSchools.telone: LocalRegex._schoolTelone,
+    LocalSchools.uz: LocalRegex._schoolUz,
+    LocalSchools.msu: LocalRegex._schoolMsu,
+  };
+
+  bool isStudent(String studentId) => isValid(studentId, _schools[this]!);
+}

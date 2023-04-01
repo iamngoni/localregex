@@ -63,3 +63,5 @@ String regularFormat(String number) {
   final phoneNumber = number.substring(number.length - 9);
   return '0${phoneNumber.clean}';
 }
+
+enum LocalSchools { hit, telone, uz, msu }

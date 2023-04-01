@@ -1,4 +1,5 @@
 import 'package:localregex/localregex.dart';
+import 'package:localregex/src/localregex.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -381,6 +382,22 @@ void main() {
         final isValid = LocalRegex.isUrl('www.helloworld');
         expect(isValid, false);
       });
+    });
+
+    group('Dates', () {
+      test('With /', () {
+        final isValid = LocalRegex.isDate('01/04/2023');
+        expect(isValid, true);
+      });
+
+      test('With -', () {
+        final isValid = LocalRegex.isDate('01-04-2023');
+        expect(isValid, true);
+      });
+    });
+
+    test('IP Address', () {
+      expect(LocalRegex.isIpAddress('207.132.68.68'), true);
     });
   });
 }

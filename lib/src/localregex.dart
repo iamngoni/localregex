@@ -58,6 +58,22 @@ class LocalRegex {
   static final RegExp _telone = RegExp(r'(?:\+?263|0)(8688)\d{6}$');
   static final RegExp _zarnet = RegExp(r'(?:\+?263|0)(8622)\d{6}$');
 
+  // Schools
+  // telone: T2216313T
+  // hit: H180202M
+  static final RegExp _schoolHit = RegExp(r'H[0-9]{6}[A-Z]$');
+  static final RegExp _schoolTelone = RegExp(r'T[0-9]{7}[A-Z]$');
+  static final RegExp _schoolUz = RegExp(r'R[0-9]{6}[A-Z]$');
+  static final RegExp _schoolMsu = RegExp(r'R[0-9]{7}[A-Z]$');
+
+  // Utils
+  static final RegExp _date = RegExp(
+    r'^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$',
+  );
+  static final RegExp _ipAddress = RegExp(
+    r'^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$',
+  );
+
   /// isEmail
   ///
   /// Checks if given email address is valid.
@@ -128,49 +144,62 @@ class LocalRegex {
   /// isZimVoip
   ///
   /// Checks if given number is a valid Zim VoIP number.
-  static bool isZimVoip(String value) =>
-      isAfricom(value) ||
-      isDandemutande(value) ||
-      isLiquid(value) ||
-      isPowertel(value) ||
-      isTelco(value) ||
-      isTelone(value) ||
-      isZarnet(value);
+  static bool isZimVoip(String voipNumber) =>
+      isAfricom(voipNumber) ||
+      isDandemutande(voipNumber) ||
+      isLiquid(voipNumber) ||
+      isPowertel(voipNumber) ||
+      isTelco(voipNumber) ||
+      isTelone(voipNumber) ||
+      isZarnet(voipNumber);
 
   /// isZimID
   ///
   /// Checks if given string is a valid Zim ID number.
-  static bool isZimID(String value) => isValid(value, _nationalId);
+  static bool isZimID(String idNumber) => isValid(idNumber, _nationalId);
 
   /// isZimPassport
   ///
   /// Checks if given string is a valid Zim Passport number.
-  static bool isZimPassport(String value) => isValid(value, _passportNumber);
+  static bool isZimPassport(String passportNumber) =>
+      isValid(passportNumber, _passportNumber);
 
   /// isZimNumberPlate
   ///
   /// Checks if given string is a valid Zim Vehicle Number Plate number.
-  static bool isZimNumberPlate(String value) => isValid(value, _numberPlate);
+  static bool isZimNumberPlate(String numberPlate) =>
+      isValid(numberPlate, _numberPlate);
 
   /// isZimDriversLicence
   ///
   /// Checks if given string is a valid Zim Drivers Licence number.
-  static bool isZimDriversLicence(String value) =>
-      isValid(value, _driversLicence);
+  static bool isZimDriversLicence(String licenseNumber) =>
+      isValid(licenseNumber, _driversLicence);
 
   /// isPassword
   ///
   /// Checks if given string is a valid password.
-  static bool isPassword(String value) => isValid(value, _password);
+  static bool isPassword(String password) => isValid(password, _password);
 
   /// isMobileNumber
   ///
   /// Checks if given string is a valid mobile number.
   /// @recommended use [isZimMobile] instead.
-  static bool isValidMobile(String value) => isValid(value, _extraMobile);
+  static bool isValidMobile(String mobileNumber) =>
+      isValid(mobileNumber, _extraMobile);
 
   /// isUrl
   ///
   /// Checks if given string is a valid url.
-  static bool isUrl(String value) => isValid(value, _url);
+  static bool isUrl(String url) => isValid(url, _url);
+
+  /// isDate
+  ///
+  /// Checks if given string is a valid date.
+  static bool isDate(String date) => isValid(date, _date);
+
+  /// isIpAddress
+  ///
+  /// Check if given string is an IP Address
+  static bool isIpAddress(String ipAddress) => isValid(ipAddress, _ipAddress);
 }

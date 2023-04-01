@@ -2,32 +2,49 @@ import 'package:localregex/localregex.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('Extensions Test', () {
-    test('countryCode', () {
-      final mobileNumber =
-          '0777213388'.formatNumber(formatType: FormatType.countryCode);
-      expect(mobileNumber, '263777213388');
-      final landLineNumber =
-          '0242790122'.formatNumber(formatType: FormatType.countryCode);
-      expect(landLineNumber, '263242790122');
+  group('extensions', () {
+    group('mobile number formatting:', () {
+      test('countryCode', () {
+        final mobileNumber =
+            '0777213388'.formatNumber(formatType: FormatType.countryCode);
+        expect(mobileNumber, '263777213388');
+        final landLineNumber =
+            '0242790122'.formatNumber(formatType: FormatType.countryCode);
+        expect(landLineNumber, '263242790122');
+      });
+
+      test('countryCodePlus', () {
+        final mobileNumber =
+            '0777213388'.formatNumber(formatType: FormatType.countryCodePlus);
+        expect(mobileNumber, '+263777213388');
+        final landLineNumber =
+            '0242790122'.formatNumber(formatType: FormatType.countryCodePlus);
+        expect(landLineNumber, '+263242790122');
+      });
+
+      test('regular', () {
+        final mobileNumber =
+            '+263777213388'.formatNumber(formatType: FormatType.regular);
+        expect(mobileNumber, '0777213388');
+        final landLineNumber =
+            '+263242790122'.formatNumber(formatType: FormatType.regular);
+        expect(landLineNumber, '0242790122');
+      });
     });
 
-    test('countryCodePlus', () {
-      final mobileNumber =
-          '0777213388'.formatNumber(formatType: FormatType.countryCodePlus);
-      expect(mobileNumber, '+263777213388');
-      final landLineNumber =
-          '0242790122'.formatNumber(formatType: FormatType.countryCodePlus);
-      expect(landLineNumber, '+263242790122');
-    });
-
-    test('regular', () {
-      final mobileNumber =
-          '+263777213388'.formatNumber(formatType: FormatType.regular);
-      expect(mobileNumber, '0777213388');
-      final landLineNumber =
-          '+263242790122'.formatNumber(formatType: FormatType.regular);
-      expect(landLineNumber, '0242790122');
+    group('Student IDs', () {
+      test('HIT', () {
+        expect(LocalSchools.hit.isStudent('H180202M'), true);
+      });
+      test('TELONE', () {
+        expect(LocalSchools.telone.isStudent('T2216313T'), true);
+      });
+      test('UZ', () {
+        expect(LocalSchools.uz.isStudent('R197888X'), true);
+      });
+      test('MSU', () {
+        expect(LocalSchools.msu.isStudent('R2012088Z'), true);
+      });
     });
   });
 

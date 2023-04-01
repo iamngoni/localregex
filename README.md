@@ -6,6 +6,7 @@
 
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
 [![License: MIT][license_badge]][license_link]
+![Coverage](./badge.svg)
 
 [license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [license_link]: https://opensource.org/licenses/MIT
@@ -147,6 +148,16 @@ Here the output format to be used is 11-223344 K 55 as found on most national id
 ```dart
 '11223344K55'.formatID(formatType: IdFormatType.proper); // > 11-223344 K 55
 ```
+
+## School Student IDs
+
+You can validate Student IDs for multiple tertiary institutions in Zimbabwe.
+
+```dart
+LocalSchools.hit.isStudent('studentID')
+```
+
+---
 
 ## Contributors
 

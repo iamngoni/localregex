@@ -1,6 +1,7 @@
 ## 4.0.5
 
-- removed isDate method
+- updated Date regex
+- Regex for Student ID formats
 
 ## 4.0.4
 
