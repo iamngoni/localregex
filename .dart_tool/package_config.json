@@ -305,10 +305,10 @@
       "name": "localregex",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "3.0"
     }
   ],
-  "generated": "2024-07-10T23:03:17.824521Z",
+  "generated": "2024-07-10T23:19:47.618944Z",
   "generator": "pub",
   "generatorVersion": "3.6.0-22.0.dev",
   "flutterRoot": "file:///Users/modestnerd/Developer/flutter",
