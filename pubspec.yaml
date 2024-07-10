@@ -1,11 +1,12 @@
 name: localregex
 version: 4.0.6
 homepage: https://github.com/iamngoni/localregex
-publish_to: https://onepub.dev/api/nuavuhnofl/
 description: Collection of regex patterns commonly used in Zimbabwe. Regex patterns include mobile numbers, passports, vehicle license plates, driver's license, email addresses and passwords
 repository: https://github.com/iamngoni/localregex
+
 environment: 
   sdk: '>=2.18.0 <4.0.0'
+
 dev_dependencies: 
   test: ^1.23.1
-  very_good_analysis: ^4.0.0+1
+  very_good_analysis: ^6.0.0
