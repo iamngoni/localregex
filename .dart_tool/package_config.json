@@ -111,7 +111,7 @@
     },
     {
       "name": "macros",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/macros-0.1.2-main.3",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/macros-0.1.2-main.4",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
@@ -308,10 +308,10 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2024-07-10T22:31:09.073669Z",
+  "generated": "2024-07-10T23:03:17.824521Z",
   "generator": "pub",
-  "generatorVersion": "3.5.0-277.0.dev",
+  "generatorVersion": "3.6.0-22.0.dev",
   "flutterRoot": "file:///Users/modestnerd/Developer/flutter",
-  "flutterVersion": "3.23.0-13.0.pre.277",
+  "flutterVersion": "3.24.0-1.0.pre.76",
   "pubCache": "file:///Users/modestnerd/.pub-cache"
 }

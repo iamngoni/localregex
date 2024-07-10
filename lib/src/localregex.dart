@@ -209,10 +209,38 @@ class LocalRegex {
   ///
   /// Generates a random password.
   static String generatePassword({int length = 12}) {
-    const String allowedChars =
-        r'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+[]{}|;:",.<>?/~`';
+    const String smallChars = 'abcdefghijklmnopqrstuvwxyz';
+    const String capChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const String numbers = '0123456789';
+    const String characters = r'!@#$%^&*()-_=+[]{}|;:",.<>?/~`';
+
     final Random random = Random.secure();
-    return List.generate(length,
-        (index) => allowedChars[random.nextInt(allowedChars.length)]).join();
+
+    // random password should have at least one of each
+    final String randomChars = List.generate(
+      length,
+      (index) => smallChars[random.nextInt(smallChars.length)],
+    ).join();
+
+    final String randomCaps = List.generate(
+      length,
+      (index) => capChars[random.nextInt(capChars.length)],
+    ).join();
+
+    final String randomNumbers = List.generate(
+      length,
+      (index) => numbers[random.nextInt(numbers.length)],
+    ).join();
+
+    final String randomSpecialChars = List.generate(
+      length,
+      (index) => characters[random.nextInt(characters.length)],
+    ).join();
+
+    final List<String> passwordList =
+        '$randomChars$randomCaps$randomNumbers$randomSpecialChars'.split('')
+          ..shuffle();
+    final String password = passwordList.join();
+    return password.substring(0, length);
   }
 }

@@ -1,3 +1,8 @@
+## 4.0.7
+
+- fix: generate password with all characters
+
+
 ## 4.0.6
 
 - add `LocalRegex.generatePassword()` method
