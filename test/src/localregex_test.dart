@@ -399,5 +399,16 @@ void main() {
     test('IP Address', () {
       expect(LocalRegex.isIpAddress('207.132.68.68'), true);
     });
+
+    test('Generate 12 character Password', () {
+      final password = LocalRegex.generatePassword();
+      expect(password.length, 12);
+    });
+
+    test('Generates random passwords', () {
+      final password1 = LocalRegex.generatePassword();
+      final password2 = LocalRegex.generatePassword();
+      expect(password1 != password2, true);
+    });
   });
 }

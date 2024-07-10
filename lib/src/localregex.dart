@@ -5,6 +5,8 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
+import 'dart:math';
+
 part 'extensions.dart';
 part 'format_type.dart';
 part 'id_format_type.dart';
@@ -68,7 +70,7 @@ class LocalRegex {
 
   // Utils
   static final RegExp _date = RegExp(
-    r'^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$',
+    r'^(?:31([/\-.])(?:0?[13578]|1[02])\1|(?:29|30)([/\-.])(?:0?[13-9]|1[0-2])\2)(?:1[6-9]|[2-9]\d)?\d{2}$|^29([/\-.])0?2\3(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:16|[2468][048]|[3579][26])00)$|^(?:0?[1-9]|1\d|2[0-8])([/\-.])(?:0?[1-9]|1[0-2])\4(?:1[6-9]|[2-9]\d)?\d{2}$',
   );
   static final RegExp _ipAddress = RegExp(
     r'^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$',
@@ -202,4 +204,15 @@ class LocalRegex {
   ///
   /// Check if given string is an IP Address
   static bool isIpAddress(String ipAddress) => isValid(ipAddress, _ipAddress);
+
+  /// generatePassword
+  ///
+  /// Generates a random password.
+  static String generatePassword({int length = 12}) {
+    const String allowedChars =
+        r'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+[]{}|;:",.<>?/~`';
+    final Random random = Random.secure();
+    return List.generate(length,
+        (index) => allowedChars[random.nextInt(allowedChars.length)]).join();
+  }
 }

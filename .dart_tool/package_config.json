@@ -3,25 +3,25 @@
   "packages": [
     {
       "name": "_fe_analyzer_shared",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/_fe_analyzer_shared-52.0.0",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/_fe_analyzer_shared-61.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "analyzer",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/analyzer-5.4.0",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/analyzer-5.13.0",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "2.19"
     },
     {
       "name": "args",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/args-2.3.2",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/args-2.4.2",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "2.19"
     },
     {
       "name": "async",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/async-2.10.0",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/async-2.11.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -33,7 +33,7 @@
     },
     {
       "name": "collection",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/collection-1.17.1",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/collection-1.17.2",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -51,15 +51,15 @@
     },
     {
       "name": "crypto",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/crypto-3.0.2",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/crypto-3.0.3",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "2.19"
     },
     {
       "name": "file",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/file-6.1.4",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/file-7.0.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.0"
     },
     {
       "name": "frontend_server_client",
@@ -69,9 +69,9 @@
     },
     {
       "name": "glob",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/glob-2.1.1",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/glob-2.1.2",
       "packageUri": "lib/",
-      "languageVersion": "2.15"
+      "languageVersion": "2.19"
     },
     {
       "name": "http_multi_server",
@@ -99,19 +99,19 @@
     },
     {
       "name": "logging",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/logging-1.1.1",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/logging-1.2.0",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "2.19"
     },
     {
       "name": "matcher",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/matcher-0.12.14",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/matcher-0.12.16",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "meta",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/meta-1.9.0",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/meta-1.9.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -123,7 +123,7 @@
     },
     {
       "name": "node_preamble",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/node_preamble-2.0.1",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/node_preamble-2.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -147,31 +147,31 @@
     },
     {
       "name": "pub_semver",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/pub_semver-2.1.3",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/pub_semver-2.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "shelf",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/shelf-1.4.0",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/shelf-1.4.1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "shelf_packages_handler",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/shelf_packages_handler-3.0.1",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/shelf_packages_handler-3.0.2",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "2.17"
     },
     {
       "name": "shelf_static",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/shelf_static-1.1.1",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/shelf_static-1.1.2",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "2.17"
     },
     {
       "name": "shelf_web_socket",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/shelf_web_socket-1.0.3",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/shelf_web_socket-1.0.4",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -183,15 +183,15 @@
     },
     {
       "name": "source_maps",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/source_maps-0.10.11",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/source_maps-0.10.12",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "source_span",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/source_span-1.9.1",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/source_span-1.10.0",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "2.18"
     },
     {
       "name": "stack_trace",
@@ -219,27 +219,27 @@
     },
     {
       "name": "test",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/test-1.23.1",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/test-1.24.3",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "test_api",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/test_api-0.4.18",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/test_api-0.6.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "test_core",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/test_core-0.4.24",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/test_core-0.5.3",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "typed_data",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/typed_data-1.3.1",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/typed_data-1.3.2",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.17"
     },
     {
       "name": "very_good_analysis",
@@ -249,21 +249,21 @@
     },
     {
       "name": "vm_service",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/vm_service-11.0.1",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/vm_service-11.7.1",
       "packageUri": "lib/",
-      "languageVersion": "2.15"
+      "languageVersion": "2.19"
     },
     {
       "name": "watcher",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/watcher-1.0.2",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/watcher-1.1.0",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "3.0"
     },
     {
       "name": "web_socket_channel",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/web_socket_channel-2.3.0",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/web_socket_channel-2.4.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.15"
     },
     {
       "name": "webkit_inspection_protocol",
@@ -273,9 +273,9 @@
     },
     {
       "name": "yaml",
-      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/yaml-3.1.1",
+      "rootUri": "file:///Users/modestnerd/.pub-cache/hosted/pub.dev/yaml-3.1.2",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.19"
     },
     {
       "name": "localregex",
@@ -284,7 +284,10 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-04-01T10:33:35.361037Z",
+  "generated": "2024-07-10T22:16:42.284594Z",
   "generator": "pub",
-  "generatorVersion": "2.19.3"
+  "generatorVersion": "3.5.0-277.0.dev",
+  "flutterRoot": "file:///Users/modestnerd/Developer/flutter",
+  "flutterVersion": "3.23.0-13.0.pre.277",
+  "pubCache": "file:///Users/modestnerd/.pub-cache"
 }

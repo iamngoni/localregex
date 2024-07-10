@@ -1,3 +1,7 @@
+## 4.0.6
+
+- add `LocalRegex.generatePassword()` method
+
 ## 4.0.5
 
 - updated Date regex
