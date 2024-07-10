@@ -38,7 +38,6 @@ extension RegexExtensionForNumbers on String {
   ///
   /// e.g (077) 612-3098 -> 0776123098
   ///     (024) 212-3098 -> 0242123098
-
   String? formatNumber({
     required FormatType formatType,
     bool cleanNumber = true,
@@ -70,7 +69,7 @@ extension RegexExtensionForNumbers on String {
     return number;
   }
 
-  /// {@template clean_number}
+  /// {@template cleanNumber}
   /// clean number
   ///
   /// some phones autoformat contacts,
@@ -119,6 +118,10 @@ extension RegexExtensionForID on String {
   }
 }
 
+/// RegexExtensionForLocalSchools
+///
+/// Extension methods for the [LocalSchools] enum.
+///
 extension StudentIDRegexExtension on LocalSchools {
   static final Map<void, RegExp> _schools = {
     LocalSchools.hit: LocalRegex._schoolHit,
@@ -127,5 +130,9 @@ extension StudentIDRegexExtension on LocalSchools {
     LocalSchools.msu: LocalRegex._schoolMsu,
   };
 
+  /// isStudent
+  ///
+  /// Checks if the given student ID is valid.
+  ///
   bool isStudent(String studentId) => isValid(studentId, _schools[this]!);
 }

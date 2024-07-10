@@ -64,4 +64,16 @@ String regularFormat(String number) {
   return '0${phoneNumber.clean}';
 }
 
-enum LocalSchools { hit, telone, uz, msu }
+enum LocalSchools {
+  /// Harare Institute of Technology
+  hit,
+
+  /// Telone Centre for Learning
+  telone,
+
+  /// University of Zimbabwe
+  uz,
+
+  /// Midlands State University
+  msu
+}
