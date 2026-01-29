@@ -21,8 +21,13 @@ bool isValid(String value, RegExp source) {
     }
     return false;
   } catch (e) {
-    assert(false, e.toString());
-    return true;
+    // Log the error in debug mode, but return false for invalid input
+    assert(() {
+      // ignore: avoid_print
+      print('LocalRegex validation error: $e');
+      return true;
+    }());
+    return false;
   }
 }
 

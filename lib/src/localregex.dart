@@ -18,7 +18,7 @@ part 'utils.dart';
 /// LocalRegex is a regular expression library that supports locales.
 class LocalRegex {
   static final RegExp _emailAddress = RegExp(
-    r"^[a-zA-Z0-9.a-zA-Z0-9!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+(.[a-zA-Z]+)*",
+    r"^[a-zA-Z0-9.!#$%&'*+\-/=?^_`{|}~]+@[a-zA-Z0-9]([a-zA-Z0-9\-]*[a-zA-Z0-9])?(\.[a-zA-Z]{2,})+$",
   );
 
   // Major Mobile Network Providers
@@ -53,7 +53,7 @@ class LocalRegex {
 
   // Major VoIP Providers in Zimbabwe
   static final RegExp _africom = RegExp(r'(?:\+?263|0)(8644)\d{6}$');
-  static final RegExp _datemutande = RegExp(r'(?:\+?263|0)(8612)\d{6}$');
+  static final RegExp _dandemutande = RegExp(r'(?:\+?263|0)(8612)\d{6}$');
   static final RegExp _liquid = RegExp(r'(?:\+?263|0)(8677)\d{6}$');
   static final RegExp _powertel = RegExp(r'(?:\+?263|0)(8611)\d{6}$');
   static final RegExp _telco = RegExp(r'(?:\+?263|0)(8683)\d{6}$');
@@ -116,7 +116,7 @@ class LocalRegex {
   /// isDandemutande
   ///
   /// Checks if given number is a valid Dandemutande number.
-  static bool isDandemutande(String value) => isValid(value, _datemutande);
+  static bool isDandemutande(String value) => isValid(value, _dandemutande);
 
   /// isLiquid
   ///
@@ -207,40 +207,37 @@ class LocalRegex {
 
   /// generatePassword
   ///
-  /// Generates a random password.
+  /// Generates a random password that guarantees at least one character
+  /// from each category: lowercase, uppercase, number, and special character.
   static String generatePassword({int length = 12}) {
+    if (length < 4) {
+      throw ArgumentError('Password length must be at least 4');
+    }
+
     const String smallChars = 'abcdefghijklmnopqrstuvwxyz';
     const String capChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     const String numbers = '0123456789';
-    const String characters = r'!@#$%^&*()-_=+[]{}|;:",.<>?/~`';
+    const String specialChars = r'!@#$%^&*()-_=+[]{}|;:,.<>?/~';
+    const String allChars = '$smallChars$capChars$numbers$specialChars';
 
     final Random random = Random.secure();
 
-    // random password should have at least one of each
-    final String randomChars = List.generate(
-      length,
-      (index) => smallChars[random.nextInt(smallChars.length)],
-    ).join();
+    // Guarantee at least one of each type
+    final List<String> passwordChars = [
+      smallChars[random.nextInt(smallChars.length)],
+      capChars[random.nextInt(capChars.length)],
+      numbers[random.nextInt(numbers.length)],
+      specialChars[random.nextInt(specialChars.length)],
+    ];
 
-    final String randomCaps = List.generate(
-      length,
-      (index) => capChars[random.nextInt(capChars.length)],
-    ).join();
+    // Fill the rest with random characters from all categories
+    for (int i = 4; i < length; i++) {
+      passwordChars.add(allChars[random.nextInt(allChars.length)]);
+    }
 
-    final String randomNumbers = List.generate(
-      length,
-      (index) => numbers[random.nextInt(numbers.length)],
-    ).join();
+    // Shuffle to randomize positions
+    passwordChars.shuffle(random);
 
-    final String randomSpecialChars = List.generate(
-      length,
-      (index) => characters[random.nextInt(characters.length)],
-    ).join();
-
-    final List<String> passwordList =
-        '$randomChars$randomCaps$randomNumbers$randomSpecialChars'.split('')
-          ..shuffle();
-    final String password = passwordList.join();
-    return password.substring(0, length);
+    return passwordChars.join();
   }
 }
